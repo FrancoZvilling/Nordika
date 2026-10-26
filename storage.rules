@@ -1,0 +1,17 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Verificación de autenticación de administrador
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    match /{allPaths=**} {
+      // Lectura pública de imágenes para la landing page y el panel
+      allow read: if true;
+      // Escritura y eliminación restringida a usuarios administradores autenticados
+      allow write: if isAuthenticated();
+    }
+  }
+}

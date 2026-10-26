@@ -1,0 +1,56 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Función de verificación: Usuario debidamente autenticado en Firebase
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    // 1. Mensajes de contacto (Leads desde la landing page)
+    match /mensajes/{docId} {
+      // Cualquier visitante puede enviar un formulario de contacto
+      allow create: if true;
+      // ÚNICAMENTE el administrador autenticado puede ver, editar o eliminar mensajes
+      allow read, update, delete: if isAuthenticated();
+    }
+
+    // 2. Configuración general (Hero, sincronización de precios)
+    match /config/{docId} {
+      // Lectura pública para la landing page
+      allow read: if true;
+      // Escritura restringida exclusivamente al administrador autenticado
+      allow write: if isAuthenticated();
+    }
+
+    // 3. Módulos habitacionales (20m, 40m, 60m)
+    match /modulos/{docId} {
+      // Lectura pública para el catálogo
+      allow read: if true;
+      // Modificación exclusiva para el administrador autenticado
+      allow write: if isAuthenticated();
+    }
+
+    // 4. Trabajos y procesos constructivos
+    match /trabajos/{docId} {
+      // Lectura pública para la galería de obras
+      allow read: if true;
+      // Alta, modificación y baja exclusiva para el administrador autenticado
+      allow write: if isAuthenticated();
+    }
+
+    // 5. Preguntas frecuentes (FAQ)
+    match /faqs/{docId} {
+      // Lectura pública para el acordeón
+      allow read: if true;
+      // Edición exclusiva para el administrador autenticado
+      allow write: if isAuthenticated();
+    }
+
+    // Por defecto: Denegar cualquier otra operación no autorizada
+    match /{document=**} {
+      allow read, write: if isAuthenticated();
+    }
+  }
+}

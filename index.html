@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nördika | Construcción Modular</title>
+    <meta name="description" content="Innovación, diseño y eficiencia para una nueva forma de construir.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo simple.png" alt="Nördika Logo" class="nav-logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#modulos">Módulos</a></li>
+            <li><a href="#trabajos">Nuestros Trabajos</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="steelframe.html" class="nav-highlight">Sistema Steel Frame</a></li>
+            <li class="mobile-nav-item mobile-nav-contact">
+                <a href="#contacto" class="btn btn-outline w-100">Contactar</a>
+            </li>
+            <li class="mobile-nav-item mobile-nav-theme">
+                <button type="button" class="mobile-theme-btn" id="mobile-theme-toggle">
+                    <span class="mobile-theme-text">Modo Visual</span>
+                    <span class="mobile-theme-icon-wrap">
+                        <i class="ph-light ph-moon"></i>
+                        <span class="mobile-theme-label">Oscuro</span>
+                    </span>
+                </button>
+            </li>
+        </ul>
+        <div class="nav-actions" style="display: flex; align-items: center; gap: 1.25rem;">
+            <button id="theme-toggle" class="theme-btn" aria-label="Alternar tema verde">
+                <i class="ph-light ph-moon"></i>
+            </button>
+            <a href="#contacto" class="btn btn-outline nav-desktop-contact">Contactar</a>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg slide active" style="background-image: url('assets/images/img7.jpg');"></div>
+        <div class="hero-bg slide" style="background-image: url('assets/images/img17.jpg');"></div>
+        <div class="hero-bg slide" style="background-image: url('assets/images/img42.jpg');"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-container">
+            <div class="hero-content">
+                <!-- Eyebrow / Kicker -->
+                <div class="hero-eyebrow">
+                    <span class="hero-kicker-line"></span>
+                    <span class="hero-kicker-text">CONSTRUCCIÓN INDUSTRIALIZADA EN STEEL FRAME · ARGENTINA</span>
+                </div>
+
+                <!-- Título Principal -->
+                <h1 class="hero-title tech-font">
+                    ARQUITECTURA<br>
+                    MODULAR<span class="hero-dot">.</span>
+                </h1>
+
+                <!-- Descripción Detallada -->
+                <p class="hero-subtitle">
+                    Diseñamos, fabricamos e instalamos proyectos modulares a medida en todo el país. Ingeniería de precisión, sustentabilidad certificada y plazos de entrega garantizados por contrato.
+                </p>
+
+                <!-- Botones de Acción -->
+                <div class="hero-actions">
+                    <a href="#modulos" class="btn hero-btn-primary">
+                        <span>Ver modelos y precios</span>
+                        <i class="ph-light ph-arrow-up-right"></i>
+                    </a>
+                    <a href="#contacto" class="btn hero-btn-secondary">
+                        <i class="ph-light ph-calendar-check"></i>
+                        <span>Agendar reunión</span>
+                    </a>
+                    <a href="#contacto" class="btn hero-btn-outline">
+                        <i class="ph-light ph-chat-circle-dots"></i>
+                        <span>Cotizar proyecto</span>
+                    </a>
+                </div>
+
+                <!-- Insignia de Calidad y Confianza -->
+                <div class="hero-badge">
+                    <div class="hero-badge-icon">
+                        <i class="ph-light ph-seal-check"></i>
+                    </div>
+                    <div class="hero-badge-info">
+                        <span class="hero-badge-title">Garantía Estructural Certificada</span>
+                        <span class="hero-badge-desc">Sistema Steel Frame Homologado · Cobertura Nacional</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pie de Hero: Leyenda de imagen y navegación de slides -->
+            <div class="hero-footer-bar">
+                <div class="hero-caption-box">
+                    <span id="hero-slide-caption" class="hero-caption-text">Montaje e implantación en lote · Nördika</span>
+                    <div class="hero-slide-nav">
+                        <button class="slide-indicator active" data-index="0" aria-label="Slide 1"></button>
+                        <button class="slide-indicator" data-index="1" aria-label="Slide 2"></button>
+                        <button class="slide-indicator" data-index="2" aria-label="Slide 3"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección 2: Filosofía y Ventajas -->
+    <section id="filosofia" class="philosophy">
+        <div class="grid-4-cols">
+            <div class="philosophy-card">
+                <i class="ph-light ph-pen-nib icon-large"></i>
+                <h3 class="tech-font">Diseño</h3>
+                <p>Cada proyecto es pensado para integrarse a su entorno y responder a las necesidades reales de sus usuarios.</p>
+            </div>
+            <div class="philosophy-card">
+                <i class="ph-light ph-crosshair icon-large"></i>
+                <h3 class="tech-font">Precisión</h3>
+                <p>La construcción industrializada permite reducir errores, optimizar materiales y mejorar la calidad final.</p>
+            </div>
+            <div class="philosophy-card">
+                <i class="ph-light ph-clock icon-large"></i>
+                <h3 class="tech-font">Eficiencia</h3>
+                <p>Nuestros sistemas constructivos permiten disminuir significativamente los tiempos de obra.</p>
+            </div>
+            <div class="philosophy-card">
+                <i class="ph-light ph-leaf icon-large"></i>
+                <h3 class="tech-font">Sustentabilidad</h3>
+                <p>Reducción de desperdicios, eficiencia energética y uso racional de recursos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Banner -->
+    <section class="banner-section">
+        <div class="banner-container">
+            <img src="assets/images/pie.webp" alt="Construcción Modular Nördika" class="banner-img">
+        </div>
+    </section>
+
+    <!-- Sección Nosotros -->
+    <section id="nosotros" class="about-section section-padding">
+        <div class="about-grid">
+            <div class="about-content">
+                <h2 class="section-title">Nuestra Empresa</h2>
+                <h3 class="about-slogan tech-font">INNOVACIÓN, DISEÑO Y EFICIENCIA PARA UNA NUEVA FORMA DE CONSTRUIR.</h3>
+                <p>En <strong>NÖRDIKA</strong> creemos que la construcción puede ser más rápida, más eficiente e inteligente. Somos una empresa especializada en el desarrollo de viviendas modulares, ampliaciones, cabañas, dormis turísticos, proyectos personalizados y espacios habitacionales construidos mediante sistemas industrializados de última generación.</p>
+                <p>Combinamos tecnología, diseño y procesos optimizados para ofrecer soluciones modernas, duraderas y adaptadas a las necesidades actuales. Nuestro enfoque se basa en la construcción en seco mediante tecnología <strong>Steel Frame</strong>, un sistema ampliamente utilizado en los países más desarrollados del mundo por su precisión, eficiencia energética y velocidad de ejecución.</p>
+                <p>Trabajamos junto a arquitectos, desarrollistas, inversores y clientes particulares para transformar ideas en proyectos concretos, priorizando siempre la calidad constructiva, la funcionalidad y el diseño contemporáneo.</p>
+            </div>
+            
+            <div class="about-cards">
+                <div class="mission-vision-card">
+                    <h4 class="tech-font">Nuestra Visión</h4>
+                    <p>Ser una empresa referente en construcción modular e industrializada, reconocida por la calidad de sus proyectos, la innovación de sus procesos y el compromiso con cada cliente.</p>
+                    <p>Buscamos impulsar una nueva manera de construir, más eficiente, sustentable y alineada con las necesidades del presente y del futuro.</p>
+                </div>
+                
+                <div class="mission-vision-card">
+                    <h4 class="tech-font">Nuestra Misión</h4>
+                    <p>Diseñar y construir espacios funcionales, modernos y eficientes que mejoren la calidad de vida de las personas.</p>
+                    <p>Nos comprometemos a desarrollar soluciones constructivas que reduzcan tiempos de ejecución, optimicen recursos y garanticen altos estándares de calidad y confort.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="modulos" class="catalog section-padding">
+        <div class="section-header center">
+            <span class="section-kicker tech-font">Catálogo de Unidades</span>
+            <h2 class="section-title">Línea de Módulos</h2>
+            <p class="section-desc">Diseños estandarizados, transportables y listos para habitar. Elija la escala y el nivel de equipamiento para su próximo proyecto.</p>
+        </div>
+        
+        <div class="catalog-grid">
+            <article class="module-card" data-title="Módulo 20 m²" data-target="modal-20m" data-modal-img="assets/images/20m/modal.webp">
+                <div class="module-image-container">
+                    <span class="module-chip tech-font">Nö. 01 · 20 m²</span>
+                    <img src="assets/images/20m/tarjeta.webp" alt="Módulo Exterior 20m" class="module-img img-real">
+                </div>
+                <div class="module-info">
+                    <div class="module-header">
+                        <h3 class="module-name">Módulo 20 m²</h3>
+                        <p class="module-price price-display">Desde USD $14.500</p>
+                    </div>
+
+                    <div class="module-features">
+                        <span><i class="ph-light ph-ruler"></i> 20 m² cubiertos</span>
+                        <span><i class="ph-light ph-door"></i> Monoambiente</span>
+                        <span><i class="ph-light ph-bathtub"></i> 1 Baño completo</span>
+                    </div>
+
+                    <div class="module-plans-select">
+                        <span class="plans-label">Nivel de terminación:</span>
+                        <div class="module-badges">
+                            <button class="badge plan-btn" data-price="USD $11.500">Básico</button>
+                            <button class="badge plan-btn active" data-price="USD $14.500">Standard</button>
+                            <button class="badge plan-btn" data-price="USD $18.500">Premium</button>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-solid btn-module details-btn">Ver Detalles y Fotos <i class="ph-light ph-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="module-card" data-title="Nö. 02 · 40 m²" data-target="modal-40m" data-modal-img="assets/images/45m/modal.webp">
+                <div class="module-image-container">
+                    <span class="module-chip tech-font">Nö. 02 · 40 m²</span>
+                    <img src="assets/images/45m/tarjeta.webp" alt="Módulo Exterior 40m" class="module-img img-real">
+                </div>
+                <div class="module-info">
+                    <div class="module-header">
+                        <h3 class="module-name">Módulo 40 m²</h3>
+                        <p class="module-price price-display">Desde USD $28.000</p>
+                    </div>
+
+                    <div class="module-features">
+                        <span><i class="ph-light ph-ruler"></i> 40 m² cubiertos</span>
+                        <span><i class="ph-light ph-door"></i> 1 Dormitorio</span>
+                        <span><i class="ph-light ph-bathtub"></i> 1 Baño completo</span>
+                    </div>
+
+                    <div class="module-plans-select">
+                        <span class="plans-label">Nivel de terminación:</span>
+                        <div class="module-badges">
+                            <button class="badge plan-btn" data-price="USD $22.000">Básico</button>
+                            <button class="badge plan-btn active" data-price="USD $28.000">Standard</button>
+                            <button class="badge plan-btn" data-price="USD $35.000">Premium</button>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-solid btn-module details-btn">Ver Detalles y Fotos <i class="ph-light ph-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="module-card" data-title="Módulo 60 m²" data-target="modal-60m" data-modal-img="assets/images/60m/modal.webp">
+                <div class="module-image-container">
+                    <span class="module-chip tech-font">Nö. 03 · 60 m²</span>
+                    <img src="assets/images/60m/tarjeta.webp" alt="Módulo Exterior 60m" class="module-img img-real">
+                </div>
+                <div class="module-info">
+                    <div class="module-header">
+                        <h3 class="module-name">Módulo 60 m²</h3>
+                        <p class="module-price price-display">Desde USD $39.500</p>
+                    </div>
+
+                    <div class="module-features">
+                        <span><i class="ph-light ph-ruler"></i> 60 m² cubiertos</span>
+                        <span><i class="ph-light ph-door"></i> 2 Dormitorios</span>
+                        <span><i class="ph-light ph-bathtub"></i> 1 Baño completo</span>
+                    </div>
+
+                    <div class="module-plans-select">
+                        <span class="plans-label">Nivel de terminación:</span>
+                        <div class="module-badges">
+                            <button class="badge plan-btn" data-price="USD $30.000">Básico</button>
+                            <button class="badge plan-btn active" data-price="USD $39.500">Standard</button>
+                            <button class="badge plan-btn" data-price="USD $48.000">Premium</button>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-solid btn-module details-btn">Ver Detalles y Fotos <i class="ph-light ph-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Modales -->
+    <div id="modal-20m" class="modal-overlay">
+        <div class="modal-content" style="max-width: 1200px; max-height: 90vh; overflow-y: auto; overflow-x: hidden; padding: 0; background-color: var(--charcoal);">
+            <button class="modal-close" style="position: absolute; right: 1.5rem; top: 1.5rem; z-index: 10;"><i class="ph-light ph-x"></i></button>
+            <div class="modal-grid-top">
+                <div class="modal-gallery" style="background-color: var(--charcoal); padding: 2.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="modal-main-img-container" style="width: 100%; aspect-ratio: 4/3; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                        <img class="modal-img" src="assets/images/20m/modal.webp" alt="Módulo" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="modal-thumbnails" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem;">
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/20m/0.webp" alt="Thumb 1" class="modal-thumb">
+                        </div>
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/20m/1.webp" alt="Thumb 2" class="modal-thumb">
+                        </div>
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/20m/2.webp" alt="Thumb 3" class="modal-thumb">
+                        </div>
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/20m/3.webp" alt="Thumb 4" class="modal-thumb">
+                        </div>
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/20m/4.webp" alt="Thumb 5" class="modal-thumb">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-main-info" style="padding: 2.5rem 3rem 2.5rem 1rem; display: flex; flex-direction: column; justify-content: center;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem;">
+                        <div>
+                            <span style="color: var(--teal); font-family: var(--font-heading); font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase;">Nö. 01 · 20 m²</span>
+                            <h2 class="modal-title tech-font text-white" style="margin-bottom: 0.5rem; font-size: 2.5rem;">Módulo 20 m²</h2>
+                            <p style="color: var(--wood); font-style: italic; font-size: 1.1rem; margin: 0;">Compacto, funcional y adaptable</p>
+                        </div>
+                        <div class="modal-price-box" style="text-align: right; margin: 0;">
+                            <span style="display: block; color: var(--teal); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.25rem;">Precio Calculado</span>
+                            <div class="modal-price text-3xl font-bold text-white tech-font">USD $14.500</div>
+                        </div>
+                    </div>
+                    <div style="color: var(--silver); line-height: 1.8; font-size: 1rem;">
+                        <p class="mb-4">Este Nö. 01 de 20 m² ha sido diseñado para ofrecer una solución habitacional eficiente, moderna y de rápida ejecución. Su distribución optimiza cada metro cuadrado disponible, integrando área de descanso, kitchenette y baño completo en un espacio confortable y funcional.</p>
+                        <p>Es una excelente alternativa para quienes buscan ampliar la capacidad de alojamiento de un emprendimiento turístico o incorporar espacios independientes con una inversión optimizada.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-grid-bottom" style="background: rgba(0,0,0,0.2); border-top: 1px solid rgba(255,255,255,0.05);">
+                <div>
+                    <h4 class="tech-font text-white mb-4" style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">Características principales</h4>
+                    <ul style="color: var(--silver); font-size: 0.9rem; line-height: 1.6; list-style-type: none; padding-left: 0; margin: 0;">
+                        <li style="margin-bottom: 0.5rem;"><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i> </span> Superficie cubierta: 20 m²</li>
+                        <li style="margin-bottom: 0.5rem;"><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i> </span> Excelente aislación térmica y acústica</li>
+                        <li style="margin-bottom: 0.5rem;"><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i> </span> Diseño moderno y minimalista</li>
+                        <li style="margin-bottom: 0.5rem;"><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i> </span> Bajo mantenimiento</li>
+                        <li style="margin-bottom: 0.5rem;"><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i> </span> Rápida ejecución y montaje</li>
+                        <li><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i> </span> Posibilidad de personalización en terminaciones</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="tech-font text-white mb-4" style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">Aplicaciones recomendadas</h4>
+                    <ul style="color: var(--silver); font-size: 0.9rem; line-height: 1.6; list-style-type: none; padding-left: 0; margin: 0;">
+                        <li style="margin-bottom: 0.5rem;">✅ Dormis para complejos</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Cabañas temporarias</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Departamentos estudio</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Espacios de huéspedes</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Oficinas privadas</li>
+                        <li>✅ Ampliaciones residenciales</li>
+                    </ul>
+                </div>
+                <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div style="background: rgba(255,255,255,0.03); border-left: 3px solid var(--teal); padding: 1.25rem; margin-bottom: 1rem;">
+                        <p style="color: var(--silver); font-size: 0.85rem; font-style: italic; margin: 0; line-height: 1.6;">Gracias a su diseño compacto y eficiente, este módulo permite generar nuevas unidades de alojamiento en terrenos reducidos, optimizando la rentabilidad de complejos turísticos, glampings, cabañas y emprendimientos vacacionales.</p>
+                    </div>
+                    <a href="#contacto" class="btn btn-solid w-full text-center modal-contact-btn" style="padding: 1rem;">Consultar Proyecto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-40m" class="modal-overlay">
+        <div class="modal-content" style="max-width: 1200px; max-height: 90vh; overflow-y: auto; overflow-x: hidden; padding: 0; background-color: var(--charcoal);">
+            <button class="modal-close" style="position: absolute; right: 1.5rem; top: 1.5rem; z-index: 10;"><i class="ph-light ph-x"></i></button>
+            <div class="modal-grid-top">
+                <div class="modal-gallery" style="background-color: var(--charcoal); padding: 2.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="modal-main-img-container" style="width: 100%; aspect-ratio: 4/3; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                        <img class="modal-img" src="assets/images/45m/modal.webp" alt="Módulo" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="modal-thumbnails" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem;">
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/45m/0.webp" alt="Thumb 1" class="modal-thumb">
+                        </div>
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/45m/1.webp" alt="Thumb 2" class="modal-thumb">
+                        </div>
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/45m/2.webp" alt="Thumb 3" class="modal-thumb">
+                        </div>
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/45m/3.webp" alt="Thumb 4" class="modal-thumb">
+                        </div>
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/45m/4.webp" alt="Thumb 5" class="modal-thumb">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-main-info" style="padding: 2.5rem 3rem 2.5rem 1rem; display: flex; flex-direction: column; justify-content: center;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem;">
+                        <div>
+                            <span style="color: var(--teal); font-family: var(--font-heading); font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase;">Nö. 02 · 40 m²</span>
+                            <h2 class="modal-title tech-font text-white" style="margin-bottom: 0.5rem; font-size: 2.5rem;">Módulo 40 m²</h2>
+                            <p style="color: var(--wood); font-style: italic; font-size: 1.1rem; margin: 0;">Diseño inteligente para vivir, invertir o emprender</p>
+                        </div>
+                        <div class="modal-price-box" style="text-align: right; margin: 0;">
+                            <span style="display: block; color: var(--teal); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.25rem;">Precio Calculado</span>
+                            <div class="modal-price text-3xl font-bold text-white tech-font">USD $28.000</div>
+                        </div>
+                    </div>
+                    <div style="color: var(--silver); line-height: 1.8; font-size: 1rem;">
+                        <p class="mb-4">El Nö. 02 de 40 m² ha sido desarrollado para quienes buscan un equilibrio perfecto entre funcionalidad, confort y diseño contemporáneo. Su distribución permite incorporar ambientes claramente definidos, brindando una experiencia habitacional cómoda tanto para uso permanente como turístico.</p>
+                        <p>Gracias a su diseño modular, este modelo se adapta a diferentes necesidades, convirtiéndose en una excelente opción para viviendas unifamiliares, cabañas de alquiler, departamentos independientes o desarrollos turísticos de pequeña escala.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-grid-bottom" style="background: rgba(0,0,0,0.2); border-top: 1px solid rgba(255,255,255,0.05);">
+                <div>
+                    <h4 class="tech-font text-white mb-4" style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">Características principales</h4>
+                    <ul style="color: var(--silver); font-size: 0.9rem; line-height: 1.6; list-style-type: none; padding-left: 0; margin: 0;">
+                        <li style="margin-bottom: 0.5rem;"><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i> </span> Superficie cubierta: 40 m²</li>
+                        <li style="margin-bottom: 0.5rem;"><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i> </span> Excelente aislación térmica y acústica</li>
+                        <li style="margin-bottom: 0.5rem;"><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i> </span> Diseño moderno de líneas limpias</li>
+                        <li style="margin-bottom: 0.5rem;"><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i> </span> Construcción rápida y eficiente</li>
+                        <li><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i> </span> Terminaciones personalizables según cada proyecto</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="tech-font text-white mb-4" style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">Aplicaciones recomendadas</h4>
+                    <ul style="color: var(--silver); font-size: 0.9rem; line-height: 1.6; list-style-type: none; padding-left: 0; margin: 0;">
+                        <li style="margin-bottom: 0.5rem;">✅ Vivienda permanente para 1 o 2 personas</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Cabañas turísticas premium</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Departamentos tipo loft o estudio ampliado</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Unidades para complejos vacacionales</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Viviendas de fin de semana</li>
+                        <li>✅ Inversión para renta temporaria</li>
+                    </ul>
+                </div>
+                <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div style="background: rgba(255,255,255,0.03); border-left: 3px solid var(--teal); padding: 1.25rem; margin-bottom: 1rem;">
+                        <p style="color: var(--silver); font-size: 0.85rem; font-style: italic; margin: 0; line-height: 1.6;">Su configuración permite generar unidades habitacionales de alta demanda para alquiler temporario, ofreciendo un excelente equilibrio entre inversión inicial, confort del usuario y rentabilidad del emprendimiento. Además, su diseño modular facilita la repetición de unidades dentro de complejos turísticos, optimizando costos de construcción y tiempos de ejecución.</p>
+                    </div>
+                    <a href="#contacto" class="btn btn-solid w-full text-center modal-contact-btn" style="padding: 1rem;">Consultar Proyecto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-60m" class="modal-overlay">
+        <div class="modal-content" style="max-width: 1200px; max-height: 90vh; overflow-y: auto; overflow-x: hidden; padding: 0; background-color: var(--charcoal);">
+            <button class="modal-close" style="position: absolute; right: 1.5rem; top: 1.5rem; z-index: 10;"><i class="ph-light ph-x"></i></button>
+            <div class="modal-grid-top">
+                <div class="modal-gallery" style="background-color: var(--charcoal); padding: 2.5rem; display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="modal-main-img-container" style="width: 100%; aspect-ratio: 4/3; overflow: hidden; border: 1px solid rgba(255,255,255,0.1);">
+                        <img class="modal-img" src="assets/images/60m/modal.webp" alt="Módulo" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="modal-thumbnails" style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.5rem;">
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/60m/0.webp" alt="Thumb 1" class="modal-thumb">
+                        </div>
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/60m/1.webp" alt="Thumb 2" class="modal-thumb">
+                        </div>
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/60m/2.webp" alt="Thumb 3" class="modal-thumb">
+                        </div>
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/60m/3.webp" alt="Thumb 4" class="modal-thumb">
+                        </div>
+                        <div class="modal-thumb-wrapper" onclick="openLightbox(this)">
+                            <img src="assets/images/60m/4.webp" alt="Thumb 5" class="modal-thumb">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-main-info" style="padding: 2.5rem 3rem 2.5rem 1rem; display: flex; flex-direction: column; justify-content: center;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem;">
+                        <div>
+                            <span style="color: var(--teal); font-family: var(--font-heading); font-size: 0.9rem; letter-spacing: 0.05em; text-transform: uppercase;">Nö. 03 · 60 m²</span>
+                            <h2 class="modal-title tech-font text-white" style="margin-bottom: 0.5rem; font-size: 2.5rem;">Módulo 60 m²</h2>
+                            <p style="color: var(--wood); font-style: italic; font-size: 1.1rem; margin: 0;">Amplitud, versatilidad y máxima habitabilidad</p>
+                        </div>
+                        <div class="modal-price-box" style="text-align: right; margin: 0;">
+                            <span style="display: block; color: var(--teal); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.25rem;">Precio Calculado</span>
+                            <div class="modal-price text-3xl font-bold text-white tech-font">USD $39.500</div>
+                        </div>
+                    </div>
+                    <div style="color: var(--silver); line-height: 1.8; font-size: 1rem;">
+                        <p class="mb-4">El Nö. 03 de 60 m² representa nuestra propuesta de mayor escala, concebida para brindar una solución habitacional completa, funcional y de máxima categoría. Su distribución optimizada permite contar con ambientes independientes y confortables tanto para residencia permanente como para proyectos turísticos premium.</p>
+                        <p>Construido íntegramente con tecnología Steel Frame de ingeniería de precisión, ofrece una inigualable eficiencia térmica y acústica, tiempos récord de entrega y una arquitectura moderna que se integra armoniosamente a cualquier entorno.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-grid-bottom" style="background: rgba(0,0,0,0.2); border-top: 1px solid rgba(255,255,255,0.05);">
+                <div>
+                    <h4 class="tech-font text-white mb-4" style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">Características principales</h4>
+                    <ul style="color: var(--silver); font-size: 0.9rem; line-height: 1.6; list-style-type: none; padding-left: 0; margin: 0;">
+                        <li style="margin-bottom: 0.5rem;"><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i>  </span> Superficie cubierta: 60 m²</li>
+                        <li style="margin-bottom: 0.5rem;"><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i>  </span> Distribución funcional de 2 a 3 ambientes</li>
+                        <li style="margin-bottom: 0.5rem;"><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i>  </span> Máxima aislación termoacústica de alta densidad</li>
+                        <li style="margin-bottom: 0.5rem;"><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i>  </span> Estructura Steel Frame de precisión milimétrica</li>
+                        <li style="margin-bottom: 0.5rem;"><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i>  </span> Construcción rápida, eficiente y de bajo mantenimiento</li>
+                        <li><span style="color: var(--teal); margin-right: 0.5rem;"><i class="ph-light ph-check-circle" style="color: var(--teal); margin-right: 0.5rem;"></i>  </span> Terminaciones personalizables según cada proyecto</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="tech-font text-white mb-4" style="font-size: 1.1rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">Aplicaciones recomendadas</h4>
+                    <ul style="color: var(--silver); font-size: 0.9rem; line-height: 1.6; list-style-type: none; padding-left: 0; margin: 0;">
+                        <li style="margin-bottom: 0.5rem;">✅ Vivienda permanente familiar (2 a 4 personas)</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Casas de campo o de fin de semana premium</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Cabañas turísticas de alta categoría</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Oficinas corporativas y estudios profesionales</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Ampliaciones residenciales de gran escala</li>
+                        <li>✅ Inversión inmobiliaria de rápida rentabilidad</li>
+                    </ul>
+                </div>
+                <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div style="background: rgba(255,255,255,0.03); border-left: 3px solid var(--teal); padding: 1.25rem; margin-bottom: 1rem;">
+                        <p style="color: var(--silver); font-size: 0.85rem; font-style: italic; margin: 0; line-height: 1.6;">Una solución habitacional completa e integral. Su generosa distribución y calidad constructiva ofrecen el mismo confort que una edificación tradicional pero con la rapidez, precisión y eficiencia energética de la construcción industrializada.</p>
+                    </div>
+                    <a href="#contacto" class="btn btn-solid w-full text-center modal-contact-btn" style="padding: 1rem;">Consultar Proyecto</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox-overlay" class="lightbox-overlay">
+        <button class="lightbox-close"><i class="ph-light ph-x"></i></button>
+        <button class="lightbox-prev"><i class="ph-light ph-caret-left"></i></button>
+        <img id="lightbox-img" class="lightbox-img" src="" alt="Vista ampliada">
+        <button class="lightbox-next"><i class="ph-light ph-caret-right"></i></button>
+        <div class="lightbox-swipe-hint">
+            <i class="ph-light ph-arrows-horizontal"></i>
+            <span>Deslizá para navegar</span>
+        </div>
+    </div>
+
+    <!-- Sección 4: Especificaciones -->
+    <section id="especificaciones" class="section-padding dark-section">
+        <div class="section-header center">
+            <h2 class="section-title text-white">Especificaciones Nivel Standard</h2>
+            <p class="section-desc text-silver">Transparencia absoluta. Conoce en detalle los materiales y características de nuestra línea más elegida.</p>
+        </div>
+        
+        <div class="specs-dashboard">
+            <!-- Menú lateral -->
+            <div class="specs-nav">
+                <button class="spec-tab active" data-target="estructura"><i class="ph-light ph-house-line"></i> Estructura y Exterior</button>
+                <button class="spec-tab" data-target="interiores"><i class="ph-light ph-bathtub"></i> Interiores y Terminaciones</button>
+                <button class="spec-tab" data-target="equipamiento"><i class="ph-light ph-plug"></i> Equipamiento</button>
+                <button class="spec-tab" data-target="caracteristicas"><i class="ph-light ph-list-checks"></i> Aplicaciones y Specs</button>
+            </div>
+            
+            <!-- Contenido -->
+            <div class="specs-content-area">
+                
+                <!-- Estructura -->
+                <div class="spec-pane active" id="pane-estructura">
+                    <div class="spec-grid">
+                        <div class="spec-item">
+                            <span class="spec-label">Techo</span>
+                            <span class="spec-value">Chapa sinusoidal con excelente aislamiento.</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Muros Exteriores</span>
+                            <span class="spec-value">Sistema multicapa: Chapa / Sidding / EPS con revestimiento plástico.</span>
+                        </div>
+                        <div class="spec-item">
+                            <span class="spec-label">Carpintería</span>
+                            <span class="spec-value">Aluminio de alta prestación, aberturas con vidrio simple.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interiores -->
+                <div class="spec-pane" id="pane-interiores">
+                    <div style="margin-bottom: 1.25rem;">
+                        <table class="spec-table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="tech-font"><i class="ph-light ph-paint-brush"></i> Terminaciones Generales</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-key">Piso</td>
+                                    <td class="col-val">Flotante de 1ra calidad color gris.</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-key">Revestimientos</td>
+                                    <td class="col-val">Muros, cielorraso y zócalos de PVC.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="split-pane">
+                        <table class="spec-table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="tech-font"><i class="ph-light ph-cooking-pot"></i> Cocina</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-key">Mesada</td>
+                                    <td class="col-val">Madera multilaminada laqueada (bordes pulidos).</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-key">Bacha</td>
+                                    <td class="col-val">Acero inoxidable.</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-key">Anafe</td>
+                                    <td class="col-val">Eléctrico de dos hornallas estándar.</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-key">Muebles</td>
+                                    <td class="col-val">Bajo mesada con espacio de guardado.</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-key">Grifería</td>
+                                    <td class="col-val">Monocomando para cocina.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="spec-table">
+                            <thead>
+                                <tr>
+                                    <th colspan="2" class="tech-font"><i class="ph-light ph-bathtub"></i> Baño</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="col-key">Vanitory</td>
+                                    <td class="col-val">Melamina y madera laqueada, con bacha.</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-key">Artefactos</td>
+                                    <td class="col-val">Ducha, inodoro y bidet.</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-key">Superficies</td>
+                                    <td class="col-val">Revestimiento cerámico de calidad.</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-key">Grifería</td>
+                                    <td class="col-val">Monocomando completa para baño.</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-key">Accesorios</td>
+                                    <td class="col-val">Espejo rectangular incluido.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Equipamiento -->
+                <div class="spec-pane" id="pane-equipamiento">
+                    <ul class="spec-list large">
+                        <li><i class="ph-light ph-drop"></i> <div><strong>Termotanque:</strong> Sistema eléctrico eficiente.</div></li>
+                        <li><i class="ph-light ph-lightbulb"></i> <div><strong>Iluminación y Eléctrica:</strong> Plafones de LED interior y exterior con apliques bidireccionales. Tomas y enchufes instalados.</div></li>
+                        <li><i class="ph-light ph-bed"></i> <div><strong>Habitación:</strong> Cómoda + mesa de luz x2 diseño Nördika.</div></li>
+                    </ul>
+                </div>
+
+                <!-- Características -->
+                <div class="spec-pane" id="pane-caracteristicas">
+                    <div class="split-pane">
+                        <div>
+                            <h4 class="pane-subtitle tech-font">Aplicaciones Recomendadas</h4>
+                            <ul class="spec-list check-list">
+                                <li>Dormis para complejos turísticos.</li>
+                                <li>Cabañas de alquiler temporario.</li>
+                                <li>Departamentos tipo estudio.</li>
+                                <li>Espacios para huéspedes u oficinas privadas.</li>
+                                <li>Ampliaciones residenciales.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="pane-subtitle tech-font">Características</h4>
+                            <ul class="spec-list check-list">
+                                <li><strong>Superficie cubierta:</strong> 20 m².</li>
+                                <li>Excelente aislación térmica y acústica.</li>
+                                <li>Diseño moderno y minimalista.</li>
+                                <li>Rápida ejecución y bajo mantenimiento.</li>
+                                <li>Posibilidad de personalización en terminaciones.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Bloque de Precio -->
+            <div class="specs-price-card">
+                <p class="price-label">Precio Nivel Standard</p>
+                <h3 class="price-value tech-font">USD $14.500.-</h3>
+                <p class="price-disclaimer">*NO INCLUYE LOGÍSTICA, IVA, NI FUNDACIONES.</p>
+                <a href="#contacto" class="btn btn-wood w-full mt-4">Consultar Proyecto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Nuestros Trabajos -->
+    <section id="trabajos" class="works-section section-padding">
+        <div class="section-header center">
+            <span class="section-kicker tech-font">Metodología en Obra y Montaje</span>
+            <h2 class="section-title">Nuestros Trabajos</h2>
+            <p class="section-desc">Del cálculo milimétrico y ensamblaje en nave industrial hasta el izaje, transporte y emplazamiento definitivo. Conocé la ingeniería y precisión con la que materializamos cada obra.</p>
+        </div>
+
+        <!-- Barra de Control: Selector de Modalidad y Filtros de Etapa -->
+        <div class="works-controls-container">
+            <div class="works-view-switch" role="tablist">
+                <button type="button" class="works-view-btn active" data-view="carousel" id="btn-view-carousel">
+                    <i class="ph-light ph-slideshow"></i>
+                    <span>Carrusel Interactivo</span>
+                </button>
+                <button type="button" class="works-view-btn" data-view="mosaic" id="btn-view-mosaic">
+                    <i class="ph-light ph-squares-four"></i>
+                    <span>Mosaico Completo (29)</span>
+                </button>
+            </div>
+
+            <div class="works-filters" role="group" aria-label="Filtrar por etapa de trabajo">
+                <button type="button" class="works-filter-btn active" data-filter="all">Todos <span class="filter-badge">29</span></button>
+                <button type="button" class="works-filter-btn" data-filter="estructura">Estructura & Steel Frame</button>
+                <button type="button" class="works-filter-btn" data-filter="montaje">Montaje & Logística</button>
+                <button type="button" class="works-filter-btn" data-filter="envolvente">Terminaciones & Envolvente</button>
+                <button type="button" class="works-filter-btn" data-filter="finalizadas">Obras Entregadas</button>
+            </div>
+        </div>
+
+        <!-- VISTA 1: Carrusel Dinámico de Obra (Activo por defecto) -->
+        <div class="works-view-panel active" id="works-panel-carousel">
+            <!-- Escenario Principal Cinematográfico -->
+            <div class="works-stage-card">
+                <div class="works-stage-viewport" id="works-stage-viewport">
+                    <div class="works-stage-blur-bg" id="works-stage-blur-bg"></div>
+                    <img id="works-stage-img" src="assets/images/trabajos/display/16-9 (1).webp" alt="Obra Nördika" class="works-stage-img" loading="eager" decoding="async">
+                    
+                    <!-- HUD Superior: Etapa técnica + Botón Expandir -->
+                    <div class="works-hud-top">
+                        <div class="works-stage-tags">
+                            <span class="works-tag-phase tech-font" id="works-stage-phase"><i class="ph-light ph-crane"></i> Montaje & Logística</span>
+                            <span class="works-tag-ratio tech-font" id="works-stage-ratio">16:9 Panorámica</span>
+                        </div>
+                        <button type="button" class="works-expand-btn tech-font" id="works-expand-btn" title="Ampliar a pantalla completa">
+                            <i class="ph-light ph-arrows-out"></i>
+                            <span class="expand-text">Ampliar</span>
+                        </button>
+                    </div>
+
+                    <!-- HUD Inferior: Info Técnica + Navegación y Contador -->
+                    <div class="works-hud-bottom">
+                        <div class="works-stage-info">
+                            <span class="works-info-index tech-font" id="works-stage-index">01 / 29</span>
+                            <h3 class="works-stage-title" id="works-stage-title">Izaje e Implantación en Terreno</h3>
+                            <p class="works-stage-desc" id="works-stage-desc">Posicionamiento milimétrico del módulo sobre platea mediante hidrogrúa de alto tonelaje.</p>
+                        </div>
+                        <div class="works-hud-actions">
+                            <div class="works-carousel-nav">
+                                <button type="button" class="works-nav-arrow" id="works-prev-btn" aria-label="Obra anterior">
+                                    <i class="ph-light ph-caret-left"></i>
+                                </button>
+                                <button type="button" class="works-nav-arrow" id="works-next-btn" aria-label="Obra siguiente">
+                                    <i class="ph-light ph-caret-right"></i>
+                                </button>
+                            </div>
+                            <button type="button" class="works-play-btn" id="works-play-btn" aria-label="Pausar / Reproducir">
+                                <i class="ph-light ph-pause"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Barra de Progreso de Autoplay -->
+                    <div class="works-progress-track">
+                        <div class="works-progress-bar" id="works-progress-bar"></div>
+                    </div>
+                </div>
+
+                <!-- Tira de Miniaturas Horizontales Deslizable (Filmstrip) -->
+                <div class="works-thumbs-outer">
+                    <button type="button" class="works-thumbs-arrow thumbs-left" id="thumbs-scroll-left" aria-label="Desplazar miniaturas a la izquierda">
+                        <i class="ph-light ph-caret-left"></i>
+                    </button>
+                    <div class="works-thumbs-track" id="works-thumbs-track">
+                        <!-- Generado dinámicamente para enlazar sincronizadamente las 29 obras -->
+                    </div>
+                    <button type="button" class="works-thumbs-arrow thumbs-right" id="thumbs-scroll-right" aria-label="Desplazar miniaturas a la derecha">
+                        <i class="ph-light ph-caret-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Ticker Continuo "Obras en Marcha" (Infinite Marquee) -->
+            <div class="works-marquee-wrapper">
+                <div class="works-marquee-header">
+                    <span class="tech-font marquee-kicker"><i class="ph-light ph-activity"></i> REGISTRO EN TIEMPO REAL · PROCESOS EN TALLER Y LOTE</span>
+                    <span class="marquee-hint"><i class="ph-light ph-cursor-click"></i> Hacé clic en cualquier obra para verla en pantalla completa</span>
+                </div>
+                <div class="works-marquee-track-container" id="works-marquee-container">
+                    <div class="works-marquee-track" id="works-marquee-track">
+                        <!-- Generado dinámicamente con imágenes variadas (16:9, 2:3, 1:1, etc.) en bucle infinito -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VISTA 2: Mosaico Arquitectónico Completo (29 obras filtrables) -->
+        <div class="works-view-panel" id="works-panel-mosaic">
+            <div class="works-mosaic-grid" id="works-mosaic-grid">
+                <!-- Generado dinámicamente con los 29 proyectos y sus respectivos spans (16:9, 2:3, 1:1, 2:1) -->
+            </div>
+        </div>
+
+        <!-- Banner de Métricas y CTA -->
+        <div class="works-kpi-bar">
+            <div class="works-kpi-item">
+                <div class="works-kpi-icon"><i class="ph-light ph-gauge"></i></div>
+                <div class="works-kpi-text">
+                    <span class="works-kpi-val tech-font">+100%</span>
+                    <span class="works-kpi-sub">Precisión en Nave Techada</span>
+                </div>
+            </div>
+            <div class="works-kpi-item">
+                <div class="works-kpi-icon"><i class="ph-light ph-shield-check"></i></div>
+                <div class="works-kpi-text">
+                    <span class="works-kpi-val tech-font">0 Imprevistos</span>
+                    <span class="works-kpi-sub">Certeza de Costos y Plazos</span>
+                </div>
+            </div>
+            <div class="works-kpi-item">
+                <div class="works-kpi-icon"><i class="ph-light ph-timer"></i></div>
+                <div class="works-kpi-text">
+                    <span class="works-kpi-val tech-font">70% Menos Tiempo</span>
+                    <span class="works-kpi-sub">Frente a Obra Tradicional</span>
+                </div>
+            </div>
+            <div class="works-kpi-action">
+                <a href="#contacto" class="btn btn-solid">
+                    <span>Cotizar Proyecto</span>
+                    <i class="ph-light ph-arrow-right" style="margin-left: 0.5rem;"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="faq" class="faq-section section-padding teal-section">
+        <div class="section-header center">
+            <h2 class="section-title text-white">Preguntas Frecuentes</h2>
+        </div>
+        
+        <div class="faq-container">
+            <!-- Pregunta 1 -->
+            <div class="faq-item">
+                <button class="faq-question tech-font">
+                    ¿Qué hacemos?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p class="faq-intro">Desarrollamos proyectos arquitectónicos integrales a través del sistema <strong>Steel Frame</strong>, cubriendo diversas escalas y requerimientos:</p>
+                        <ul class="faq-list">
+                            <li><strong class="faq-subheading">Viviendas Permanentes:</strong> Casas modernas diseñadas para ofrecer confort térmico, durabilidad estructural y máxima eficiencia energética.</li>
+                            <li><strong class="faq-subheading">Cabañas Turísticas:</strong> Soluciones habitacionales optimizadas para complejos vacacionales, hotelería y desarrollos en entornos naturales.</li>
+                            <li><strong class="faq-subheading">Dormis Modulares:</strong> Módulos versátiles y funcionales, ideales para ampliaciones rápidas, glampings o unidades independientes.</li>
+                            <li><strong class="faq-subheading">Desarrollos Inmobiliarios:</strong> Soluciones seriadas e industrializadas a gran escala que optimizan tiempos y reducen costos de ejecución.</li>
+                            <li><strong class="faq-subheading">Oficinas y Espacios Comerciales:</strong> Espacios de trabajo funcionales y acústicamente confortables, adaptados a la identidad de cada empresa.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 2 -->
+            <div class="faq-item">
+                <button class="faq-question tech-font">
+                    ¿Por qué elegir Nördika?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p class="faq-intro">Combinamos tecnología constructiva de vanguardia con <strong>Ingeniería Fina</strong> en cada proceso. Nuestras principales ventajas:</p>
+                        <ul class="faq-list">
+                            <li><strong class="faq-subheading">Certeza de Costos y Plazos:</strong> Construcción industrializada en planta, eliminando imprevistos, sobrecostos y demoras climáticas.</li>
+                            <li><strong class="faq-subheading">Diseño Arquitectónico Inteligente:</strong> Espacios modernos, luminosos, de distribución óptima y estética cuidada al milímetro.</li>
+                            <li><strong class="faq-subheading">Confort Termoacústico Superior:</strong> Paquetes multicapa con lana de vidrio y barreras técnicas para un clima interior perfecto los 365 días del año.</li>
+                            <li><strong class="faq-subheading">Acompañamiento Profesional:</strong> Asesoramiento continuo por parte de nuestro equipo técnico desde el anteproyecto hasta la entrega final.</li>
+                            <li><strong class="faq-subheading">Sustentabilidad y Eficiencia:</strong> Menor impacto ambiental, obra seca y limpia sin desperdicios, y gran ahorro energético mensual.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 3 -->
+            <div class="faq-item">
+                <button class="faq-question tech-font">
+                    ¿Qué incluye el nivel Standard?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p class="faq-intro">Nuestros módulos en nivel <strong>Standard</strong> se entregan listos para habitar con materiales de primera línea y terminaciones cuidadas:</p>
+                        <ul class="faq-list">
+                            <li><strong class="faq-subheading">Estructura y Cerramientos:</strong> Perfilería estructural en Steel Frame galvanizado, paneles exteriores y cubierta de chapa con aislamiento termoacústico.</li>
+                            <li><strong class="faq-subheading">Terminaciones Interiores:</strong> Muros y cielorrasos con placas de yeso pintadas al látex, pisos flotantes de alto tránsito y zócalos perimetrales.</li>
+                            <li><strong class="faq-subheading">Baño Completo:</strong> Sanitarios de primera línea (Capea/Roca), griferías FV o similar, receptáculo de ducha impermeabilizado y vanitory instalado.</li>
+                            <li><strong class="faq-subheading">Carpintería e Instalaciones:</strong> Ventanas de aluminio anodizado línea Módena, puertas interiores y circuito eléctrico completo con tablero seccional y llaves térmicas.</li>
+                        </ul>
+                        <div class="faq-note">
+                            <strong class="faq-note-title">Importante:</strong> El nivel Standard no incluye costo de flete/logística, IVA ni la ejecución de platea/fundaciones en el terreno (las cuales se cotizan a medida según la topografía del lote).
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 4 -->
+            <div class="faq-item">
+                <button class="faq-question tech-font">
+                    ¿Cuánto tiempo demora la construcción?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p class="faq-intro">El método modular off-site reduce los tiempos de obra en más de un <strong>60%</strong> respecto a la construcción tradicional húmeda:</p>
+                        <ul class="faq-list">
+                            <li><strong class="faq-subheading">Fabricación en Planta (45 a 60 días):</strong> Manufactura integral bajo nave cubierta, sin interrupciones por lluvias ni inclemencias climáticas.</li>
+                            <li><strong class="faq-subheading">Control de Calidad Riguroso:</strong> Inspección exhaustiva de cada fase estructural, hidrosanitaria y eléctrica antes del despacho.</li>
+                            <li><strong class="faq-subheading">Montaje en Terreno (24 a 48 horas):</strong> La unidad llega ensamblada y se asienta sobre las fundaciones preparadas, lista para conectar servicios.</li>
+                            <li><strong class="faq-subheading">Plazos Contractuales:</strong> Cronograma de entrega garantizado y establecido por contrato, brindándote total previsibilidad.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 5 -->
+            <div class="faq-item">
+                <button class="faq-question tech-font">
+                    ¿Se pueden personalizar los módulos?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p class="faq-intro"><strong>Sí, con total flexibilidad.</strong> Si bien contamos con tipologías base optimizadas, cada módulo puede adaptarse a tu gusto y terreno:</p>
+                        <ul class="faq-list">
+                            <li><strong class="faq-subheading">Distribución y Espacios:</strong> Posibilidad de reorganizar ambientes, incorporar dormitorios o diseñar anexos para futuras ampliaciones en etapas.</li>
+                            <li><strong class="faq-subheading">Revestimientos y Fachadas:</strong> Opciones de acabado exterior en chapa acanalada, siding de fibrocemento, tablas de madera tratada o WPC.</li>
+                            <li><strong class="faq-subheading">Adicionales Arquitectónicos:</strong> Integración de galerías, pérgolas, decks perimetrales, aberturas DVH o sistemas de energía solar.</li>
+                            <li><strong class="faq-subheading">Desarrollos a Medida:</strong> Adaptación de módulos para usos específicos como estudios profesionales, consultorios o proyectos hoteleros.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pregunta 6 -->
+            <div class="faq-item">
+                <button class="faq-question tech-font">
+                    ¿El sistema es apto para cualquier clima?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <p class="faq-intro"><strong>Totalmente.</strong> El sistema constructivo Steel Frame está homologado a nivel mundial para responder en las condiciones climáticas más exigentes:</p>
+                        <ul class="faq-list">
+                            <li><strong class="faq-subheading">Aislamiento Térmico Multicapa:</strong> Lana de vidrio de alta densidad que minimiza el consumo energético tanto en inviernos rigurosos como en veranos cálidos.</li>
+                            <li><strong class="faq-subheading">Barrera Hidrófuga y Cortaviento:</strong> Membrana respirable tipo Tyvek que frena el viento y la humedad exterior, evitando cualquier condensación interna.</li>
+                            <li><strong class="faq-subheading">Resistencia Estructural y Sismo-resistencia:</strong> Estructura de acero galvanizado indeformable, altamente resistente a fuertes vientos, sismos y granizo.</li>
+                            <li><strong class="faq-subheading">Inmunidad Biológica y Durabilidad:</strong> Materiales incombustibles e inmunes a plagas (termitas, insectos) y humedad de cimientos, con más de 100 años de vida útil.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="footer dark-section">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <img src="assets/images/logo simple.png" alt="Nördika Logo" class="footer-logo mb-4" style="max-width: 180px; height: auto;">
+                <p class="text-silver mb-6" style="font-size: 1.1rem; line-height: 1.5;">Tu consulta no es molestia.<br>Es el comienzo.</p>
+                <div class="contact-info">
+                    <a href="https://wa.me/5493541591045" target="_blank" class="contact-box">
+                        <i class="ph-light ph-whatsapp-logo"></i>
+                        <span>+54 9 3541 591045</span>
+                    </a>
+                    <a href="mailto:nordikamodular@gmail.com" class="contact-box">
+                        <i class="ph-light ph-envelope"></i>
+                        <span>nordikamodular@gmail.com</span>
+                    </a>
+                    <a href="https://nordikamodular.com.ar" class="contact-box">
+                        <i class="ph-light ph-globe"></i>
+                        <span>nordikamodular.com.ar</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="tech-font">Nombre</label>
+                        <input type="text" id="name" required placeholder="Tu nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="tech-font">Email</label>
+                        <input type="email" id="email" required placeholder="tu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="tech-font">Número de Teléfono / WhatsApp</label>
+                        <input type="tel" id="phone" required placeholder="+54 9 ...">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="tech-font">Mensaje</label>
+                        <textarea id="message" rows="4" required placeholder="Contanos sobre tu proyecto..."></textarea>
+                    </div>
+                    <button type="submit" id="contactSubmitBtn" class="btn btn-solid btn-wood w-full">
+                        <span>Enviar Mensaje</span>
+                        <i class="ph-light ph-paper-plane-tilt" style="margin-left: 0.5rem;"></i>
+                    </button>
+                    <div id="contactFeedback" class="contact-feedback" style="display: none; margin-top: 1rem; padding: 0.85rem; text-align: center; font-size: 0.9rem;"></div>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Nördika Construcción Modular. Todos los derechos reservados. <span style="margin: 0 0.5rem; opacity: 0.5;">|</span> Desarrollado por <a href="https://wa.me/5493541315119" target="_blank" class="dev-link" style="color: var(--teal); text-decoration: none; font-weight: 500; transition: color var(--transition-fast);">Franco Zvilling</a></p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/5493541591045" target="_blank" class="whatsapp-float" id="whatsappFloat" aria-label="Contactar por WhatsApp">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+    </a>
+
+    <!-- Firebase SDK & Config -->
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+

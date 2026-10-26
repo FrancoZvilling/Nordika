@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso al Panel de Control | Nördika Arquitectura Modular</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Estilos Login -->
+    <link rel="stylesheet" href="css/admin.css">
+    <style>
+        .login-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(circle at 50% 20%, rgba(0, 128, 128, 0.08) 0%, transparent 60%),
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 100% 100%, 40px 40px, 40px 40px;
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 440px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(0, 128, 128, 0.05);
+            padding: 3rem 2.5rem;
+            position: relative;
+            animation: cardAppear 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes cardAppear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 2.25rem;
+        }
+
+        .login-logo {
+            max-width: 160px;
+            height: auto;
+            margin-bottom: 1.25rem;
+        }
+
+        .login-badge {
+            display: inline-block;
+            background: rgba(0, 128, 128, 0.12);
+            color: var(--teal-light);
+            border: 1px solid var(--teal);
+            font-size: 0.725rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            padding: 0.3rem 0.85rem;
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .login-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.4rem;
+        }
+
+        .login-subtitle {
+            font-size: 0.825rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
+        .login-form .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .login-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .login-input-icon {
+            position: absolute;
+            left: 1rem;
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            pointer-events: none;
+            transition: color var(--transition);
+        }
+
+        .login-input-wrapper .admin-input {
+            padding-left: 2.85rem;
+            padding-right: 2.85rem;
+            background: #0e1114;
+            height: 50px;
+            font-size: 0.95rem;
+        }
+
+        .login-input-wrapper .admin-input:focus ~ .login-input-icon {
+            color: var(--teal-light);
+        }
+
+        .toggle-password-btn {
+            position: absolute;
+            right: 0.75rem;
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.25rem;
+            cursor: pointer;
+            padding: 0.4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color var(--transition);
+        }
+
+        .toggle-password-btn:hover {
+            color: var(--white);
+        }
+
+        .btn-login-submit {
+            width: 100%;
+            height: 52px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.65rem;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+
+        .login-feedback {
+            display: none;
+            padding: 0.85rem 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+            line-height: 1.4;
+            border-left: 3px solid var(--danger);
+            background: var(--danger-bg);
+            color: #ff8585;
+        }
+
+        .login-feedback.active {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            animation: fadeIn 0.25s ease;
+        }
+
+        .login-feedback.info {
+            border-left-color: var(--teal);
+            background: rgba(0, 128, 128, 0.1);
+            color: var(--teal-light);
+        }
+
+        .login-footer-info {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .security-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--wood);
+            font-weight: 500;
+        }
+
+        .back-to-site {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.8rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: color var(--transition);
+            margin-top: 0.25rem;
+        }
+
+        .back-to-site:hover {
+            color: var(--white);
+        }
+    </style>
+</head>
+<body class="login-page">
+
+    <div class="login-card">
+        <div class="login-header">
+            <a href="index.html" title="Ir al sitio público">
+                <img src="assets/images/logo simple.png" alt="Nördika" class="login-logo">
+            </a>
+            <div>
+                <span class="login-badge tech-font">ACCESO RESTRINGIDO</span>
+            </div>
+            <h1 class="login-title tech-font">Panel de Control</h1>
+            <p class="login-subtitle">Ingresá tus credenciales autorizadas para gestionar el sitio web.</p>
+        </div>
+
+        <!-- Mensajes de Error / Estado -->
+        <div id="loginFeedback" class="login-feedback">
+            <i class="ph-light ph-warning-circle" style="font-size: 1.25rem; flex-shrink: 0;"></i>
+            <span id="loginFeedbackText">Credenciales incorrectas.</span>
+        </div>
+
+        <form id="loginForm" class="login-form" novalidate>
+            <div class="form-group">
+                <label for="loginEmail" class="field-label tech-font">Usuario / Correo Electrónico</label>
+                <div class="login-input-wrapper">
+                    <input type="text" id="loginEmail" class="admin-input" placeholder="admin@nordika.com" required autocomplete="username" autofocus>
+                    <i class="ph-light ph-envelope-simple login-input-icon"></i>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="loginPassword" class="field-label tech-font">Contraseña Maestra</label>
+                <div class="login-input-wrapper">
+                    <input type="password" id="loginPassword" class="admin-input" placeholder="••••••••••••" required autocomplete="current-password">
+                    <i class="ph-light ph-lock-key login-input-icon"></i>
+                    <button type="button" class="toggle-password-btn" id="togglePasswordBtn" aria-label="Mostrar contraseña">
+                        <i class="ph-light ph-eye" id="togglePasswordIcon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-login-submit" id="loginSubmitBtn">
+                <i class="ph-light ph-sign-in"></i>
+                <span>Ingresar al Sistema</span>
+            </button>
+        </form>
+
+        <div class="login-footer-info">
+            <div class="security-badge tech-font">
+                <i class="ph-light ph-shield-check"></i>
+                <span>Encriptación TLS & Firebase Authentication</span>
+            </div>
+            <a href="index.html" class="back-to-site tech-font">
+                <i class="ph-light ph-arrow-left"></i>
+                <span>Volver a la página principal</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Firebase SDK Compat (App & Auth) -->
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+
+    <!-- Lógica de Autenticación Segura -->
+    <script src="js/login.js"></script>
+</body>
+</html>

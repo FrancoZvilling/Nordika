@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Steel Frame - Nördika Construcción Modular</title>
+    
+    <!-- Fuentes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Iconos -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="assets/images/logo simple.png" alt="Nördika Logo" class="nav-logo">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html#nosotros">Nosotros</a></li>
+            <li><a href="index.html#modulos">Módulos</a></li>
+            <li><a href="index.html#trabajos">Nuestros Trabajos</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="steelframe.html" class="nav-highlight">Sistema Steel Frame</a></li>
+            <li class="mobile-nav-item mobile-nav-contact">
+                <a href="index.html#contacto" class="btn btn-outline w-100">Contactar</a>
+            </li>
+            <li class="mobile-nav-item mobile-nav-theme">
+                <button type="button" class="mobile-theme-btn" id="mobile-theme-toggle">
+                    <span class="mobile-theme-text">Modo Visual</span>
+                    <span class="mobile-theme-icon-wrap">
+                        <i class="ph-light ph-moon"></i>
+                        <span class="mobile-theme-label">Oscuro</span>
+                    </span>
+                </button>
+            </li>
+        </ul>
+        <div class="nav-actions" style="display: flex; align-items: center; gap: 1.25rem;">
+            <button id="theme-toggle" class="theme-btn" aria-label="Alternar tema verde">
+                <i class="ph-light ph-moon"></i>
+            </button>
+            <a href="index.html#contacto" class="btn btn-outline nav-desktop-contact">Contactar</a>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Header Steel Frame (Banner Gráfico) -->
+    <header class="steelframe-page-banner" aria-label="Sistema Steel Frame">
+        <div class="page-banner-bg" style="background-image: url('assets/images/steelframe.webp');"></div>
+        <h1 class="sr-only">Sistema Steel Frame</h1>
+    </header>
+
+    <!-- Contenido Principal -->
+    <section class="steelframe-section section-padding">
+        <div class="steelframe-container" style="max-width: 1200px; margin: 0 auto; padding: 0 5%;">
+            
+            <!-- 1. BLOQUE DE ENTRADA ARQUITECTÓNICO & KPIS -->
+            <div class="sf-hero-brief mb-12">
+                <div class="sf-brief-grid">
+                    <div class="sf-brief-text">
+                        <div class="sf-kicker">
+                            <span class="sf-kicker-line"></span>
+                            <span class="sf-kicker-text">INGENIERÍA ESTRUCTURAL · ESTÁNDAR NÖRDIKA</span>
+                        </div>
+                        <h2 class="sf-brief-title tech-font">Precisión Milimétrica y Confort sin Concesiones.</h2>
+                        <p class="sf-lead">
+                            El sistema <strong>Steel Frame</strong> es la evolución tecnológica de la construcción. Reemplaza la lentitud e incertidumbre de la obra húmeda por la exactitud milimétrica de perfiles en <strong>acero galvanizado conformado en frío</strong>.
+                        </p>
+                        <p class="sf-subtext">
+                            En <strong>NÖRDIKA</strong> industrializamos cada proceso: diseñamos con software estructural BIM, pre-ensamblamos bajo nave cubierta en planta y montamos en terreno con rapidez inigualable, entregando unidades de alto desempeño listas para habitar.
+                        </p>
+                        <div class="sf-badges-row">
+                            <span class="sf-chip"><i class="ph-light ph-certificate"></i> Acero Galvanizado IRAM IAS U 500-205</span>
+                            <span class="sf-chip"><i class="ph-light ph-shield-check"></i> Certificado de Aptitud Técnica (CAT)</span>
+                            <span class="sf-chip"><i class="ph-light ph-leaf"></i> 100% Obra Seca Sustentable</span>
+                        </div>
+                    </div>
+
+                    <div class="sf-brief-kpis">
+                        <div class="sf-kpi-card">
+                            <div class="sf-kpi-icon"><i class="ph-light ph-timer"></i></div>
+                            <div class="sf-kpi-number tech-font">-60%</div>
+                            <div class="sf-kpi-label">Tiempo de Ejecución</div>
+                            <div class="sf-kpi-desc">Montaje en semanas, no meses. Cero demoras por mal clima.</div>
+                        </div>
+                        <div class="sf-kpi-card">
+                            <div class="sf-kpi-icon"><i class="ph-light ph-thermometer-cold"></i></div>
+                            <div class="sf-kpi-number tech-font">x3</div>
+                            <div class="sf-kpi-label">Eficiencia Térmica</div>
+                            <div class="sf-kpi-desc">Lana de vidrio multicapa que reduce hasta 45% el consumo de energía.</div>
+                        </div>
+                        <div class="sf-kpi-card">
+                            <div class="sf-kpi-icon"><i class="ph-light ph-drop-half"></i></div>
+                            <div class="sf-kpi-number tech-font">0%</div>
+                            <div class="sf-kpi-label">Humedad de Cimientos</div>
+                            <div class="sf-kpi-desc">Barreras hidrófugas continuas que impiden filtraciones y condensación.</div>
+                        </div>
+                        <div class="sf-kpi-card">
+                            <div class="sf-kpi-icon"><i class="ph-light ph-shield-star"></i></div>
+                            <div class="sf-kpi-number tech-font">+100</div>
+                            <div class="sf-kpi-label">Años de Vida Útil</div>
+                            <div class="sf-kpi-desc">Acero Z275 incombustible, inmune a termitas, plagas y fisuras.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. SIMULADOR INTERACTIVO: STEEL FRAME VS OBRA HÚMEDA -->
+            <div class="sf-simulator-box mb-12">
+                <div class="sf-sim-header">
+                    <div class="sf-kicker">
+                        <span class="sf-kicker-line"></span>
+                        <span class="sf-kicker-text">HERRAMIENTA INTERACTIVA</span>
+                    </div>
+                    <h3 class="sf-sim-title tech-font">Simulador Comparativo: El Impacto Real en tu Proyecto</h3>
+                    <p class="sf-sim-subtitle">Seleccioná una tipología para comparar en tiempo real las diferencias críticas entre Steel Frame e ingeniería tradicional húmeda:</p>
+                </div>
+
+                <!-- Selector de Proyectos -->
+                <div class="sf-project-selector" role="tablist">
+                    <button type="button" class="sf-selector-btn active" data-project="vivienda">
+                        <i class="ph-light ph-house-line"></i>
+                        <span>Vivienda Familiar (90 m²)</span>
+                    </button>
+                    <button type="button" class="sf-selector-btn" data-project="cabana">
+                        <i class="ph-light ph-tree"></i>
+                        <span>Cabaña Turística (45 m²)</span>
+                    </button>
+                    <button type="button" class="sf-selector-btn" data-project="oficina">
+                        <i class="ph-light ph-buildings"></i>
+                        <span>Módulo Comercial (60 m²)</span>
+                    </button>
+                </div>
+
+                <!-- Panel de Métricas Comparativas Dinámicas -->
+                <div class="sf-metrics-grid">
+                    <!-- Métrica 1: Plazo de Entrega -->
+                    <div class="sf-metric-item">
+                        <div class="sf-metric-head">
+                            <span class="sf-metric-name"><i class="ph-light ph-clock-countdown"></i> Plazo de Obra Estimado</span>
+                            <span class="sf-badge-saving" id="simTimeSaved">180 días ganados</span>
+                        </div>
+                        <div class="sf-bar-group">
+                            <div class="sf-bar-label-row">
+                                <span class="sf-tag-sf">Steel Frame Nördika</span>
+                                <strong id="simSteelTime">60 días (Llave en mano)</strong>
+                            </div>
+                            <div class="sf-progress-track">
+                                <div class="sf-progress-fill sf-fill-steel" id="simBarSteelTime" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                        <div class="sf-bar-group">
+                            <div class="sf-bar-label-row">
+                                <span class="sf-tag-trad">Construcción Tradicional</span>
+                                <span id="simTradTime">240 días (8 meses a la intemperie)</span>
+                            </div>
+                            <div class="sf-progress-track">
+                                <div class="sf-progress-fill sf-fill-trad" id="simBarTradTime" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Métrica 2: Desperdicio de Materiales -->
+                    <div class="sf-metric-item">
+                        <div class="sf-metric-head">
+                            <span class="sf-metric-name"><i class="ph-light ph-trash-simple"></i> Desperdicio y Escombros</span>
+                            <span class="sf-badge-saving" id="simWasteSaved">90% menos residuos</span>
+                        </div>
+                        <div class="sf-bar-group">
+                            <div class="sf-bar-label-row">
+                                <span class="sf-tag-sf">Steel Frame Nördika</span>
+                                <strong id="simSteelWaste">&lt; 2% (Obra limpia en planta)</strong>
+                            </div>
+                            <div class="sf-progress-track">
+                                <div class="sf-progress-fill sf-fill-steel" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                        <div class="sf-bar-group">
+                            <div class="sf-bar-label-row">
+                                <span class="sf-tag-trad">Construcción Tradicional</span>
+                                <span id="simTradWaste">18% a 22% (Escombros y roturas)</span>
+                            </div>
+                            <div class="sf-progress-track">
+                                <div class="sf-progress-fill sf-fill-trad" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Métrica 3: Ahorro Energético -->
+                    <div class="sf-metric-item">
+                        <div class="sf-metric-head">
+                            <span class="sf-metric-name"><i class="ph-light ph-lightning"></i> Gasto en Climatización</span>
+                            <span class="sf-badge-saving" id="simEnergySaved">Ahorro permanente</span>
+                        </div>
+                        <div class="sf-bar-group">
+                            <div class="sf-bar-label-row">
+                                <span class="sf-tag-sf">Steel Frame Nördika</span>
+                                <strong id="simSteelEnergy">-45% Consumo Energético Mensual</strong>
+                            </div>
+                            <div class="sf-progress-track">
+                                <div class="sf-progress-fill sf-fill-steel" style="width: 55%;"></div>
+                            </div>
+                        </div>
+                        <div class="sf-bar-group">
+                            <div class="sf-bar-label-row">
+                                <span class="sf-tag-trad">Construcción Tradicional</span>
+                                <span id="simTradEnergy">100% Gasto estándar (Puentes térmicos)</span>
+                            </div>
+                            <div class="sf-progress-track">
+                                <div class="sf-progress-fill sf-fill-trad" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Métrica 4: Certeza Presupuestaria -->
+                    <div class="sf-metric-item">
+                        <div class="sf-metric-head">
+                            <span class="sf-metric-name"><i class="ph-light ph-currency-circle-dollar"></i> Previsibilidad Económica</span>
+                            <span class="sf-badge-saving" id="simCostSaved">Cero sorpresas</span>
+                        </div>
+                        <div class="sf-bar-group">
+                            <div class="sf-bar-label-row">
+                                <span class="sf-tag-sf">Steel Frame Nördika</span>
+                                <strong id="simSteelCost">100% Cerrado por contrato</strong>
+                            </div>
+                            <div class="sf-progress-track">
+                                <div class="sf-progress-fill sf-fill-steel" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="sf-bar-group">
+                            <div class="sf-bar-label-row">
+                                <span class="sf-tag-trad">Construcción Tradicional</span>
+                                <span id="simTradCost">Desvíos habituales del 20% al 35%</span>
+                            </div>
+                            <div class="sf-progress-track">
+                                <div class="sf-progress-fill sf-fill-trad" style="width: 65%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Capas Interactivas (Mini-Toggles para explorar detalles técnicos) -->
+                <div class="sf-sim-toggles">
+                    <span class="sf-toggles-title"><i class="ph-light ph-sliders-horizontal"></i> Activá o desactivá capas para ver su impacto técnico:</span>
+                    <div class="sf-toggles-row">
+                        <label class="sf-toggle-label">
+                            <input type="checkbox" class="sf-toggle-check" data-feature="aislacion" checked>
+                            <span class="sf-toggle-custom"></span>
+                            <span>Aislamiento Lana de Vidrio (100mm)</span>
+                        </label>
+                        <label class="sf-toggle-label">
+                            <input type="checkbox" class="sf-toggle-check" data-feature="taller" checked>
+                            <span class="sf-toggle-custom"></span>
+                            <span>Fabricación Industrializada en Taller</span>
+                        </label>
+                        <label class="sf-toggle-label">
+                            <input type="checkbox" class="sf-toggle-check" data-feature="galvanizado" checked>
+                            <span class="sf-toggle-custom"></span>
+                            <span>Acero Galvanizado Z275 Anticorrosión</span>
+                        </label>
+                    </div>
+                    <div id="sfToggleFeedback" class="sf-toggle-feedback">
+                        <i class="ph-light ph-check-circle" style="color:var(--wood);"></i>
+                        <span>Configuración óptima activa: Máxima aislación acústica/térmica, cero demoras climáticas y protección garantizada por 100+ años.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. VENTAJAS DEL SISTEMA CATEGORIZADAS & INTERACTIVAS -->
+            <div class="sf-advantages-section mb-12">
+                <div class="section-header center mb-8">
+                    <div class="sf-kicker center">
+                        <span class="sf-kicker-line"></span>
+                        <span class="sf-kicker-text">CATÁLOGO DE BENEFICIOS</span>
+                        <span class="sf-kicker-line"></span>
+                    </div>
+                    <h3 class="tech-font" style="font-size: 2.2rem; margin-top: 0.5rem;">Ventajas del Sistema Steel Frame</h3>
+                    <p class="section-desc">Ingeniería concebida para superar las limitaciones de la obra tradicional en cada aspecto técnico y funcional.</p>
+                </div>
+
+                <!-- Filtro Interactivo de Categorías -->
+                <div class="sf-filter-bar mb-8">
+                    <button type="button" class="sf-filter-btn active" data-filter="all">Todas las Ventajas (8)</button>
+                    <button type="button" class="sf-filter-btn" data-filter="tiempo">⚡ Tiempo & Precisión</button>
+                    <button type="button" class="sf-filter-btn" data-filter="clima">🌡️ Clima & Aislación</button>
+                    <button type="button" class="sf-filter-btn" data-filter="estructura">🛡️ Seguridad & Estructura</button>
+                    <button type="button" class="sf-filter-btn" data-filter="sustentable">🌱 Sustentabilidad & Costos</button>
+                </div>
+
+                <!-- Grilla de Tarjetas Enriquecidas -->
+                <div class="sf-cards-grid">
+                    <!-- Tarjeta 1 -->
+                    <div class="sf-card" data-cat="tiempo">
+                        <div class="sf-card-top">
+                            <span class="sf-cat-badge">Tiempo</span>
+                            <div class="sf-card-icon"><i class="ph-light ph-timer"></i></div>
+                        </div>
+                        <h4 class="sf-card-title tech-font">Rapidez Industrializada</h4>
+                        <p class="sf-card-desc">La prefabricación de paneles en taller y el montaje en seco reducen los plazos de obra hasta un 60% respecto al ladrillo tradicional.</p>
+                        <div class="sf-card-metric">
+                            <span class="sf-metric-icon">■</span>
+                            <span><strong>Dato clave:</strong> Montaje estructural completo en 48 a 72 horas.</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 2 -->
+                    <div class="sf-card" data-cat="clima">
+                        <div class="sf-card-top">
+                            <span class="sf-cat-badge">Clima</span>
+                            <div class="sf-card-icon"><i class="ph-light ph-thermometer"></i></div>
+                        </div>
+                        <h4 class="sf-card-title tech-font">Aislamiento Termoacústico</h4>
+                        <p class="sf-card-desc">Muros con lana de vidrio de alta densidad y barreras de viento que reducen pérdidas térmicas y aíslan ruidos exteriores.</p>
+                        <div class="sf-card-metric">
+                            <span class="sf-metric-icon">■</span>
+                            <span><strong>Dato clave:</strong> Eficiencia térmica 3 veces superior a un muro de ladrillo común.</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 3 -->
+                    <div class="sf-card" data-cat="tiempo">
+                        <div class="sf-card-top">
+                            <span class="sf-cat-badge">Ingeniería</span>
+                            <div class="sf-card-icon"><i class="ph-light ph-crosshair"></i></div>
+                        </div>
+                        <h4 class="sf-card-title tech-font">Precisión Milimétrica</h4>
+                        <p class="sf-card-desc">Perfiles de acero conformados en frío según cálculo exacto por computadora. Sin paredes desfasadas, plomos torcidos ni errores manuales.</p>
+                        <div class="sf-card-metric">
+                            <span class="sf-metric-icon">■</span>
+                            <span><strong>Dato clave:</strong> Tolerancia menor a 2 mm en toda la estructura.</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 4 -->
+                    <div class="sf-card" data-cat="estructura">
+                        <div class="sf-card-top">
+                            <span class="sf-cat-badge">Estructura</span>
+                            <div class="sf-card-icon"><i class="ph-light ph-shield-check"></i></div>
+                        </div>
+                        <h4 class="sf-card-title tech-font">Durabilidad Centenaria</h4>
+                        <p class="sf-card-desc">El acero galvanizado Z275 no se oxida, no sufre ataque de hongos, termitas ni humedad ascendente, garantizando estabilidad permanente.</p>
+                        <div class="sf-card-metric">
+                            <span class="sf-metric-icon">■</span>
+                            <span><strong>Dato clave:</strong> Vida útil certificada superior a 100 años con mínimo mantenimiento.</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 5 -->
+                    <div class="sf-card" data-cat="sustentable">
+                        <div class="sf-card-top">
+                            <span class="sf-cat-badge">Ecológico</span>
+                            <div class="sf-card-icon"><i class="ph-light ph-leaf"></i></div>
+                        </div>
+                        <h4 class="sf-card-title tech-font">Construcción Sustentable</h4>
+                        <p class="sf-card-desc">Obra limpia sin consumo de agua, con reducción de desperdicios del 90%. El acero utilizado es 100% reciclable en su ciclo de vida.</p>
+                        <div class="sf-card-metric">
+                            <span class="sf-metric-icon">■</span>
+                            <span><strong>Dato clave:</strong> Huella de carbono hasta un 47% menor que el hormigón.</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 6 -->
+                    <div class="sf-card" data-cat="tiempo">
+                        <div class="sf-card-top">
+                            <span class="sf-cat-badge">Diseño</span>
+                            <div class="sf-card-icon"><i class="ph-light ph-intersect"></i></div>
+                        </div>
+                        <h4 class="sf-card-title tech-font">Flexibilidad Arquitectónica</h4>
+                        <p class="sf-card-desc">Permite grandes luces libres sin columnas intermedias, vanos generosos y suma facilidad para ampliaciones o remodelaciones futuras.</p>
+                        <div class="sf-card-metric">
+                            <span class="sf-metric-icon">■</span>
+                            <span><strong>Dato clave:</strong> Ampliaciones rápidas sin picar revoques ni generar escombros.</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 7 -->
+                    <div class="sf-card" data-cat="estructura">
+                        <div class="sf-card-top">
+                            <span class="sf-cat-badge">Seguridad</span>
+                            <div class="sf-card-icon"><i class="ph-light ph-house-line"></i></div>
+                        </div>
+                        <h4 class="sf-card-title tech-font">Sismo-resistencia Superior</h4>
+                        <p class="sf-card-desc">Su peso liviano combinado con la alta resistencia del acero otorga un comportamiento elástico insuperable ante sismos y vientos huracanados.</p>
+                        <div class="sf-card-metric">
+                            <span class="sf-metric-icon">■</span>
+                            <span><strong>Dato clave:</strong> Resiste sismos de magnitud máxima según normativa INPRES-CIRSOC.</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta 8 -->
+                    <div class="sf-card" data-cat="sustentable">
+                        <div class="sf-card-top">
+                            <span class="sf-cat-badge">Economía</span>
+                            <div class="sf-card-icon"><i class="ph-light ph-wrench"></i></div>
+                        </div>
+                        <h4 class="sf-card-title tech-font">Cero Mantenimiento Oculto</h4>
+                        <p class="sf-card-desc">Las canalizaciones de servicios pasan por el interior de los paneles sin romper paredes. Mantenimiento sencillo, económico y predecible.</p>
+                        <div class="sf-card-metric">
+                            <span class="sf-metric-icon">■</span>
+                            <span><strong>Dato clave:</strong> Sin rajaduras ni fisuras por asentamiento en muros.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparativa -->
+            <div class="comparison-section mb-8 mt-8">
+                <h3 class="tech-font mb-6 text-center" style="font-size: 2rem;">Comparativa de Sistemas</h3>
+                <div class="table-responsive" style="overflow-x: auto;">
+                    <table class="steelframe-table" style="width: 100%; border-collapse: collapse; text-align: left; background: rgba(0,0,0,0.02);">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--charcoal);">
+                                <th style="padding: 1.5rem; font-family: var(--font-heading); font-size: 1.1rem;">Característica</th>
+                                <th style="padding: 1.5rem; font-family: var(--font-heading); font-size: 1.1rem; color: var(--teal); border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Steel Frame</th>
+                                <th style="padding: 1.5rem; font-family: var(--font-heading); font-size: 1.1rem;">Tradicional</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold;">Tiempo de obra</td>
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal); border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);"><span class="highlight-text">60-70% menor</span></td>
+                                <td style="padding: 1.5rem;">Mayor</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold;">Peso estructural</td>
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal); border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);"><span class="highlight-text">Bajo</span></td>
+                                <td style="padding: 1.5rem;">Alto</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold;">Aislación térmica</td>
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal); border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);"><span class="highlight-text">Excelente</span></td>
+                                <td style="padding: 1.5rem;">Media</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold;">Precisión</td>
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal); border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);"><span class="highlight-text">Muy alta</span></td>
+                                <td style="padding: 1.5rem;">Variable</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold;">Residuos</td>
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal); border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);"><span class="highlight-text">Mínimos</span></td>
+                                <td style="padding: 1.5rem;">Elevados</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1.5rem; font-weight: bold;">Mantenimiento</td>
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal); border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);"><span class="highlight-text">Bajo</span></td>
+                                <td style="padding: 1.5rem;">Medio</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Composición de Muros -->
+            <div class="mb-8">
+                <h3 class="tech-font mb-4" style="font-size: 1.75rem;">Composición de Muros Exteriores</h3>
+                <p class="mb-6" style="line-height: 1.8;">Los muros exteriores de las viviendas NöRDIKA están diseñados para garantizar resistencia estructural, eficiencia energética, aislamiento acústico y durabilidad frente a las condiciones climáticas.<br><span style="font-style: italic; color: var(--wood);">Composición del muro (Exterior &rarr; Interior)</span></p>
+                <div class="layer-list">
+                    <div class="layer-item">
+                        <div class="layer-number">1</div>
+                        <div class="layer-content">
+                            <h4>Revestimiento exterior</h4>
+                            <p>Revestimiento plástico texturado o terminación arquitectónica según el diseño del proyecto.</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <div class="layer-number">2</div>
+                        <div class="layer-content">
+                            <h4>Placa exterior</h4>
+                            <p>Placa cementicia SUPERBOARD 12 mm o sistema EIFS (EPS), según los requerimientos técnicos y estéticos.</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <div class="layer-number">3</div>
+                        <div class="layer-content">
+                            <h4>Membrana hidrófuga y respirable</h4>
+                            <p>Protección contra filtraciones de agua y viento, permitiendo la evacuación del vapor interior.</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <div class="layer-number">4</div>
+                        <div class="layer-content">
+                            <h4>Placa estructural</h4>
+                            <p>Placa OSB estructural de 12 mm, instalada conforme a las especificaciones técnicas y normativas vigentes.</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <div class="layer-number">5</div>
+                        <div class="layer-content">
+                            <h4>Estructura Steel Frame</h4>
+                            <p>Perfiles de acero galvanizado PGC 100 mm y PGU 100 mm, conformando la estructura resistente.</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <div class="layer-number">6</div>
+                        <div class="layer-content">
+                            <h4>Aislación térmica y acústica</h4>
+                            <p>Lana de vidrio de 80 mm o 100 mm, seleccionada según requerimientos de eficiencia energética y confort.</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <div class="layer-number">7</div>
+                        <div class="layer-content">
+                            <h4>Terminación interior</h4>
+                            <p>Placa de yeso de 12,5 mm de primera calidad, proporcionando una superficie lisa, resistente y lista para pintura.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-4" style="line-height: 1.8; opacity: 0.9;">Esta configuración permite obtener un sistema constructivo de alto desempeño, con excelente comportamiento térmico y acústico, gran durabilidad y bajo mantenimiento.</p>
+            </div>
+
+            <!-- Composición de Cubierta -->
+            <div class="mb-8 mt-12">
+                <h3 class="tech-font mb-4" style="font-size: 1.75rem;">Composición de Cubierta</h3>
+                <p class="mb-6" style="line-height: 1.8;">Las cubiertas desarrolladas por NöRDIKA están diseñadas para proporcionar resistencia estructural, estanqueidad, aislamiento térmico y confort interior, adaptándose a cada proyecto.<br><span style="font-style: italic; color: var(--wood);">Composición de la cubierta (Exterior &rarr; Interior)</span></p>
+                <div class="layer-list">
+                    <div class="layer-item">
+                        <div class="layer-number">1</div>
+                        <div class="layer-content">
+                            <h4>Cubierta exterior</h4>
+                            <p>Chapa metálica prepintada o terminación especificada según los requerimientos arquitectónicos.</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <div class="layer-number">2</div>
+                        <div class="layer-content">
+                            <h4>Estructura secundaria</h4>
+                            <p>Perfiles PGO galvanizados, dimensionados según cálculo estructural y tipo de cubierta.</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <div class="layer-number">3</div>
+                        <div class="layer-content">
+                            <h4>Membrana hidrófuga</h4>
+                            <p>Barrera de protección contra filtraciones de agua y humedad, asegurando la estanqueidad del sistema.</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <div class="layer-number">4</div>
+                        <div class="layer-content">
+                            <h4>Placa estructural</h4>
+                            <p>Placa OSB de 9,5 mm, que aporta rigidez y mejora el comportamiento térmico y acústico.</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <div class="layer-number">5</div>
+                        <div class="layer-content">
+                            <h4>Estructura principal</h4>
+                            <p>Perfiles de acero galvanizado PGC 100 mm, calculados para soportar cargas permanentes y acciones climáticas.</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <div class="layer-number">6</div>
+                        <div class="layer-content">
+                            <h4>Cámara técnica y aislación</h4>
+                            <p>Lana de vidrio de 80/100mm según proyecto, optimizando el confort interior y la eficiencia energética.</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <div class="layer-number">7</div>
+                        <div class="layer-content">
+                            <h4>Cielorraso suspendido</h4>
+                            <p>Estructura de perfiles galvanizados para drywall de 35 mm.</p>
+                        </div>
+                    </div>
+                    <div class="layer-item">
+                        <div class="layer-number">8</div>
+                        <div class="layer-content">
+                            <h4>Terminación interior</h4>
+                            <p>Placas de yeso de 9,5 mm o revestimiento en machimbre de PVC, según el diseño.</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-4" style="line-height: 1.8; opacity: 0.9;">Esta solución constructiva permite obtener una cubierta liviana, resistente y eficiente, con excelente comportamiento térmico, acústico e hidrófugo.</p>
+            </div>
+
+            <!-- Fundaciones -->
+            <div class="mb-8 mt-12">
+                <h3 class="tech-font mb-4" style="font-size: 1.75rem;">Composición de Fundaciones</h3>
+                <p class="mb-6" style="line-height: 1.8;">Las fundaciones de las viviendas NöRDIKA son diseñadas específicamente para cada proyecto, considerando las características del terreno, cargas y condiciones de implantación.</p>
+                
+                <div class="grid-2-cols" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="foundation-box">
+                        <h4 class="tech-font mb-4" style="color: var(--teal); font-size: 1.25rem;">Platea de Hormigón Armado</h4>
+                        <p class="mb-4" style="line-height: 1.6;">Las viviendas se apoyan sobre una platea ejecutada conforme a cálculo estructural, compuesta por:</p>
+                        <ul class="check-list" style="padding-left: 1rem; line-height: 1.6;">
+                            <li style="margin-bottom: 0.5rem;">Hormigón H17/21 o superior, según proyecto.</li>
+                            <li style="margin-bottom: 0.5rem;">Malla electrosoldada dimensionada según las solicitaciones.</li>
+                            <li style="margin-bottom: 0.5rem;">Barrera hidrófuga para protección contra humedad ascendente.</li>
+                            <li>Refuerzos y espesores definidos según estudio del terreno.</li>
+                        </ul>
+                    </div>
+
+                    <div class="foundation-box">
+                        <h4 class="tech-font mb-4" style="color: var(--teal); font-size: 1.25rem;">Sistema de Anclaje</h4>
+                        <p class="mb-4" style="line-height: 1.6;">Vinculación entre estructura y fundación para resistir cargas de viento y sismos. Se utilizan:</p>
+                        <ul class="check-list" style="padding-left: 1rem; line-height: 1.6;">
+                            <li style="margin-bottom: 0.5rem;">Anclajes estructurales HTT14 o equivalentes.</li>
+                            <li style="margin-bottom: 0.5rem;">Varillas roscadas galvanizadas de alta resistencia.</li>
+                            <li style="margin-bottom: 0.5rem;">Anclajes químicos certificados.</li>
+                            <li>Todos los elementos son dimensionados por ingeniería.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proceso Constructivo -->
+            <div class="mb-8 mt-12">
+                <h3 class="tech-font mb-6 text-center" style="font-size: 1.75rem;">Proceso Constructivo NöRDIKA</h3>
+                <div class="table-responsive" style="overflow-x: auto;">
+                    <table class="steelframe-table" style="width: 100%; border-collapse: collapse; text-align: left; background: rgba(0,0,0,0.02);">
+                        <thead>
+                            <tr style="border-bottom: 2px solid var(--charcoal);">
+                                <th style="padding: 1.5rem; font-family: var(--font-heading); font-size: 1.1rem; width: 25%;">Etapa</th>
+                                <th style="padding: 1.5rem; font-family: var(--font-heading); font-size: 1.1rem; width: 45%; border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Descripción</th>
+                                <th style="padding: 1.5rem; font-family: var(--font-heading); font-size: 1.1rem; width: 30%;">Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal);">1. Relevamiento y Proyecto</td>
+                                <td style="padding: 1.5rem; border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Análisis del terreno, necesidades del cliente, diseño arquitectónico y desarrollo de documentación técnica.</td>
+                                <td style="padding: 1.5rem; font-style: italic; opacity: 0.9;">Proyecto ejecutivo listo para construir.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal);">2. Preparación del Terreno</td>
+                                <td style="padding: 1.5rem; border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Limpieza, nivelación y replanteo de la obra según planos aprobados.</td>
+                                <td style="padding: 1.5rem; font-style: italic; opacity: 0.9;">Terreno preparado para fundaciones.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal);">3. Ejecución de Fundaciones</td>
+                                <td style="padding: 1.5rem; border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Construcción de platea de hormigón armado con instalaciones previstas y sistema de anclajes estructurales.</td>
+                                <td style="padding: 1.5rem; font-style: italic; opacity: 0.9;">Base estructural terminada y nivelada.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal);">4. Fabricación de Paneles</td>
+                                <td style="padding: 1.5rem; border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Armado y panelizado de muros en taller o en obra utilizando perfiles PGC y PGU galvanizados.</td>
+                                <td style="padding: 1.5rem; font-style: italic; opacity: 0.9;">Paneles estructurales listos para montaje.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal);">5. Montaje de Estructura</td>
+                                <td style="padding: 1.5rem; border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Instalación de muros portantes, tabiques interiores y rigidización general de la estructura.</td>
+                                <td style="padding: 1.5rem; font-style: italic; opacity: 0.9;">Vivienda estructuralmente conformada.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal);">6. Estructura de Cubierta</td>
+                                <td style="padding: 1.5rem; border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Colocación de cabreadas, vigas, perfiles PGC y estructura secundaria según proyecto.</td>
+                                <td style="padding: 1.5rem; font-style: italic; opacity: 0.9;">Cubierta completamente estructurada.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal);">7. Cerramiento Exterior</td>
+                                <td style="padding: 1.5rem; border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Instalación de placas OSB, membrana hidrófuga y revestimientos exteriores.</td>
+                                <td style="padding: 1.5rem; font-style: italic; opacity: 0.9;">Envolvente exterior protegida.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal);">8. Colocación de Cubierta</td>
+                                <td style="padding: 1.5rem; border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Montaje de chapas, zinguería, canaletas y terminaciones de techo.</td>
+                                <td style="padding: 1.5rem; font-style: italic; opacity: 0.9;">Vivienda protegida de clima.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal);">9. Instalaciones</td>
+                                <td style="padding: 1.5rem; border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Ejecución de instalaciones eléctricas, sanitarias, datos, climatización y servicios.</td>
+                                <td style="padding: 1.5rem; font-style: italic; opacity: 0.9;">Infraestructura interna completa.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal);">10. Aislaciones</td>
+                                <td style="padding: 1.5rem; border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Colocación de lana de vidrio y demás elementos de aislación térmica y acústica.</td>
+                                <td style="padding: 1.5rem; font-style: italic; opacity: 0.9;">Eficiencia energética y confort.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal);">11. Cerramientos Interiores</td>
+                                <td style="padding: 1.5rem; border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Colocación de placas de yeso, cielorrasos y terminaciones interiores.</td>
+                                <td style="padding: 1.5rem; font-style: italic; opacity: 0.9;">Ambientes definidos y terminados.</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(0,0,0,0.05);">
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal);">12. Terminaciones</td>
+                                <td style="padding: 1.5rem; border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Pintura, revestimientos, pisos, carpinterías y detalles finales.</td>
+                                <td style="padding: 1.5rem; font-style: italic; opacity: 0.9;">Vivienda lista para habitar.</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 1.5rem; font-weight: bold; color: var(--teal);">13. Inspección y Entrega</td>
+                                <td style="padding: 1.5rem; border-left: 1px solid rgba(0,0,0,0.05); border-right: 1px solid rgba(0,0,0,0.05);">Control de calidad, revisión final y entrega al cliente.</td>
+                                <td style="padding: 1.5rem; font-style: italic; opacity: 0.9;">Proyecto finalizado y entregado.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-6 text-center" style="line-height: 1.8; opacity: 0.9; font-weight: 500;">Este proceso permite a NöRDIKA reducir significativamente los tiempos de ejecución, optimizar recursos y garantizar una construcción precisa, eficiente y de alta calidad.</p>
+            </div>
+
+            <!-- Specs -->
+            <div class="technical-specs mt-8 p-6" style="padding: 3rem; border: 1px solid var(--border-color); background-color: rgba(0,0,0,0.02);">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                    <i class="ph-light ph-ruler" style="font-size: 2.5rem; color: var(--teal);"></i>
+                    <h3 class="tech-font m-0" style="font-size: 1.5rem; margin: 0;">Especificaciones Técnicas</h3>
+                </div>
+                
+                <p class="mb-4" style="line-height: 1.8;">Las viviendas desarrolladas por NöRDIKA se construyen mediante sistema Steel Frame, utilizando perfiles de acero galvanizado conformados en frío <strong>PGC 100 mm y PGU 100 mm</strong>, que conforman la estructura principal portante de la edificación.</p>
+                <p class="mb-4" style="line-height: 1.8;">La estructura es diseñada y ejecutada para resistir las solicitaciones propias de uso, así como las cargas producidas por viento, lluvia y demás acciones climáticas previstas para cada zona de implantación. Todos los componentes estructurales son seleccionados y dimensionados de acuerdo con criterios de ingeniería y las normativas vigentes aplicables.</p>
+                <p class="mb-4" style="line-height: 1.8;">El sistema se complementa con placas estructurales, aislaciones térmicas y acústicas, barreras hidrófugas y revestimientos de alta prestación, garantizando una construcción segura, eficiente y durable.</p>
+                <p style="line-height: 1.8;">Las soluciones constructivas implementadas por NöRDIKA cumplen con los estándares técnicos y reglamentaciones vigentes, permitiendo desarrollar viviendas con excelente comportamiento estructural, eficiencia energética y confort habitacional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Simple para esta página interior -->
+    <footer id="contacto" class="footer dark-section" style="margin-top: 4rem;">
+        <div class="footer-bottom" style="border-top: none;">
+            <p>&copy; 2026 Nördika Construcción Modular. Todos los derechos reservados. <span style="margin: 0 0.5rem; opacity: 0.5;">|</span> Desarrollado por <a href="https://wa.me/5493541315119" target="_blank" class="dev-link" style="color: var(--teal); text-decoration: none; font-weight: 500; transition: color var(--transition-fast);">Franco Zvilling</a></p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Flotante -->
+    <a href="https://wa.me/5493541591045?text=Hola,%20estoy%20viendo%20la%20web%20y%20me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n." target="_blank" class="whatsapp-float visible" style="opacity: 1; visibility: visible; transform: none; animation: none;">
+        <i class="ph-light ph-whatsapp-logo"></i>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control | Nördika Construcción Modular</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Estilos Admin -->
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+<body class="admin-body">
+    <!-- Guardián de Acceso de Seguridad (Auth Gatekeeper) -->
+    <div id="authGateOverlay" style="position: fixed; inset: 0; background: #0a0c0e; z-index: 999999; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.25rem;">
+        <img src="assets/images/logo simple.png" alt="Nördika" style="max-width: 170px; height: auto;">
+        <div style="display: flex; align-items: center; gap: 0.65rem; color: #008080; font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; font-weight: 500;">
+            <i class="ph-light ph-shield-check" style="font-size: 1.35rem;"></i>
+            <span>Verificando credenciales autorizadas...</span>
+        </div>
+    </div>
+
+    <!-- Notificaciones Toast Flotantes -->
+    <div id="toastContainer" class="admin-toast-container"></div>
+
+    <!-- Layout Principal -->
+    <div class="admin-layout">
+        
+        <!-- Sidebar Lateral -->
+        <aside class="admin-sidebar" id="adminSidebar">
+            <div class="admin-brand">
+                <a href="index.html" class="brand-link" title="Ir al sitio web">
+                    <img src="assets/images/logo simple.png" alt="Nördika" class="admin-logo">
+                    <span class="admin-badge tech-font">PANEL CMS</span>
+                </a>
+                <button type="button" class="sidebar-close-btn" id="sidebarCloseBtn" aria-label="Cerrar menú">
+                    <i class="ph-light ph-x"></i>
+                </button>
+            </div>
+
+            <nav class="admin-nav">
+                <div class="nav-group-title tech-font">GESTIÓN DE CONTENIDO</div>
+                <button type="button" class="admin-nav-item active" data-tab="hero">
+                    <i class="ph-light ph-slideshow"></i>
+                    <span>Hero Principal</span>
+                </button>
+                <button type="button" class="admin-nav-item" data-tab="modulos">
+                    <i class="ph-light ph-cube"></i>
+                    <span>Módulos & Precios</span>
+                </button>
+                <button type="button" class="admin-nav-item" data-tab="trabajos">
+                    <i class="ph-light ph-images"></i>
+                    <span>Nuestros Trabajos</span>
+                </button>
+                <button type="button" class="admin-nav-item" data-tab="faqs">
+                    <i class="ph-light ph-question"></i>
+                    <span>Preguntas Frecuentes</span>
+                </button>
+
+                <div class="nav-group-title tech-font" style="margin-top: 1.5rem;">COMUNICACIÓN</div>
+                <button type="button" class="admin-nav-item" data-tab="inbox" id="inboxNavBtn">
+                    <i class="ph-light ph-envelope-simple"></i>
+                    <span>Bandeja de Entrada</span>
+                    <span class="inbox-badge" id="unreadBadge">0</span>
+                </button>
+            </nav>
+
+            <div class="admin-sidebar-footer">
+                <a href="index.html" target="_blank" class="admin-external-link tech-font">
+                    <i class="ph-light ph-arrow-square-out"></i>
+                    <span>Ver Sitio en Vivo</span>
+                </a>
+                <div class="admin-status-indicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Firebase Conectado</span>
+                </div>
+                <button type="button" class="admin-logout-btn tech-font" id="adminLogoutBtn">
+                    <i class="ph-light ph-sign-out"></i>
+                    <span>Cerrar Sesión</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Barra Superior Móvil -->
+        <header class="admin-topbar">
+            <button type="button" class="admin-hamburger" id="adminHamburger" aria-label="Abrir menú">
+                <i class="ph-light ph-list"></i>
+            </button>
+            <div class="admin-topbar-title tech-font" id="adminCurrentTabTitle">Hero Principal</div>
+            <a href="index.html" target="_blank" class="topbar-live-link" title="Ver sitio web">
+                <i class="ph-light ph-globe"></i>
+            </a>
+        </header>
+
+        <!-- Contenedor Principal de Vistas -->
+        <main class="admin-main">
+
+            <!-- 1. SECCIÓN: HERO -->
+            <section class="admin-tab-content active" id="tab-hero">
+                <div class="tab-header">
+                    <div>
+                        <h1 class="tab-title tech-font">Hero Principal</h1>
+                        <p class="tab-desc">Administrá las 3 imágenes de fondo del carrusel inicial. Podés cambiar cada una individualmente.</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="saveHeroBtn">
+                        <i class="ph-light ph-floppy-disk"></i>
+                        <span>Guardar Cambios Hero</span>
+                    </button>
+                </div>
+
+                <div class="hero-slides-grid">
+                    <!-- Slide 1 -->
+                    <div class="slide-card" data-slide="0">
+                        <div class="slide-card-header tech-font">
+                            <span>Diapositiva 01</span>
+                            <span class="slide-tag">Fondo Hero 1</span>
+                        </div>
+                        <div class="slide-preview-box" id="heroPreview0">
+                            <img src="assets/images/img7.jpg" alt="Hero 1" id="heroImg0">
+                            <div class="preview-overlay">
+                                <label for="heroUpload0" class="btn-change-img tech-font">
+                                    <i class="ph-light ph-camera"></i>
+                                    <span>Cambiar Foto</span>
+                                </label>
+                                <input type="file" id="heroUpload0" accept="image/*" class="file-input-hidden">
+                            </div>
+                        </div>
+                        <div class="slide-card-body">
+                            <label class="field-label tech-font">Texto Descriptivo / Leyenda:</label>
+                            <input type="text" class="admin-input" id="heroCaption0" value="Montaje e implantación en lote · Nördika">
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="slide-card" data-slide="1">
+                        <div class="slide-card-header tech-font">
+                            <span>Diapositiva 02</span>
+                            <span class="slide-tag">Fondo Hero 2</span>
+                        </div>
+                        <div class="slide-preview-box" id="heroPreview1">
+                            <img src="assets/images/img17.jpg" alt="Hero 2" id="heroImg1">
+                            <div class="preview-overlay">
+                                <label for="heroUpload1" class="btn-change-img tech-font">
+                                    <i class="ph-light ph-camera"></i>
+                                    <span>Cambiar Foto</span>
+                                </label>
+                                <input type="file" id="heroUpload1" accept="image/*" class="file-input-hidden">
+                            </div>
+                        </div>
+                        <div class="slide-card-body">
+                            <label class="field-label tech-font">Texto Descriptivo / Leyenda:</label>
+                            <input type="text" class="admin-input" id="heroCaption1" value="Estructura y diseño arquitectónico · Nördika">
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="slide-card" data-slide="2">
+                        <div class="slide-card-header tech-font">
+                            <span>Diapositiva 03</span>
+                            <span class="slide-tag">Fondo Hero 3</span>
+                        </div>
+                        <div class="slide-preview-box" id="heroPreview2">
+                            <img src="assets/images/img42.jpg" alt="Hero 3" id="heroImg2">
+                            <div class="preview-overlay">
+                                <label for="heroUpload2" class="btn-change-img tech-font">
+                                    <i class="ph-light ph-camera"></i>
+                                    <span>Cambiar Foto</span>
+                                </label>
+                                <input type="file" id="heroUpload2" accept="image/*" class="file-input-hidden">
+                            </div>
+                        </div>
+                        <div class="slide-card-body">
+                            <label class="field-label tech-font">Texto Descriptivo / Leyenda:</label>
+                            <input type="text" class="admin-input" id="heroCaption2" value="Terminaciones de alta prestación · Nördika">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. SECCIÓN: MÓDULOS -->
+            <section class="admin-tab-content" id="tab-modulos">
+                <div class="tab-header">
+                    <div>
+                        <h1 class="tab-title tech-font">Catálogo de Módulos & Precios</h1>
+                        <p class="tab-desc">Gestioná las tarjetas, la foto principal del modal, las 5 miniaturas obligatorias y los precios de cada nivel.</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="saveModuleBtn">
+                        <i class="ph-light ph-floppy-disk"></i>
+                        <span>Guardar Módulo Activo</span>
+                    </button>
+                </div>
+
+                <!-- Selector de Módulo -->
+                <div class="module-selector-tabs">
+                    <button type="button" class="module-tab-btn active" data-module="20m">
+                        <span class="tech-font">Módulo 20 m²</span>
+                        <span class="module-tab-sub">Nö. 01 · Monoambiente</span>
+                    </button>
+                    <button type="button" class="module-tab-btn" data-module="40m">
+                        <span class="tech-font">Módulo 40 m²</span>
+                        <span class="module-tab-sub">Nö. 02 · 1 Dormitorio</span>
+                    </button>
+                    <button type="button" class="module-tab-btn" data-module="60m">
+                        <span class="tech-font">Módulo 60 m²</span>
+                        <span class="module-tab-sub">Nö. 03 · 2 Dormitorios</span>
+                    </button>
+                </div>
+
+                <!-- Formulario del Módulo Activo -->
+                <div class="module-editor-card">
+                    
+                    <!-- Precios -->
+                    <div class="editor-section">
+                        <div class="editor-section-header">
+                            <h3 class="editor-section-title tech-font"><i class="ph-light ph-currency-dollar"></i> Precios por Nivel de Terminación</h3>
+                            <span class="section-badge-sync" id="syncBadgeNote"><i class="ph-light ph-arrows-clockwise"></i> El precio Standard de 20m se sincroniza con "Especificaciones"</span>
+                        </div>
+                        <div class="prices-editor-grid">
+                            <div class="form-group">
+                                <label class="field-label tech-font">Nivel Básico</label>
+                                <input type="text" class="admin-input price-input" id="priceBasico" placeholder="USD $11.500">
+                            </div>
+                            <div class="form-group highlighted-price">
+                                <label class="field-label tech-font">Nivel Standard (Línea Principal)</label>
+                                <input type="text" class="admin-input price-input" id="priceStandard" placeholder="USD $14.500">
+                                <span class="field-help">Impacta en la tarjeta y en la sección Especificaciones Standard</span>
+                            </div>
+                            <div class="form-group">
+                                <label class="field-label tech-font">Nivel Premium</label>
+                                <input type="text" class="admin-input price-input" id="pricePremium" placeholder="USD $18.500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Imágenes Principales: Tarjeta y Modal -->
+                    <div class="editor-section">
+                        <h3 class="editor-section-title tech-font"><i class="ph-light ph-image"></i> Imágenes Principales del Módulo</h3>
+                        <div class="main-images-grid">
+                            <div class="image-upload-card">
+                                <div class="upload-card-header tech-font">Foto de la Tarjeta (Catálogo)</div>
+                                <div class="upload-preview-container">
+                                    <img src="" alt="Tarjeta Módulo" id="modTarjetaPreview">
+                                    <label for="modTarjetaFile" class="btn-change-img tech-font">
+                                        <i class="ph-light ph-camera"></i>
+                                        <span>Cambiar Imagen</span>
+                                    </label>
+                                    <input type="file" id="modTarjetaFile" accept="image/*" class="file-input-hidden">
+                                </div>
+                                <div class="upload-card-footer">Imagen visible en la grilla del catálogo principal</div>
+                            </div>
+
+                            <div class="image-upload-card">
+                                <div class="upload-card-header tech-font">Foto Principal del Modal</div>
+                                <div class="upload-preview-container">
+                                    <img src="" alt="Modal Módulo" id="modModalPreview">
+                                    <label for="modModalFile" class="btn-change-img tech-font">
+                                        <i class="ph-light ph-camera"></i>
+                                        <span>Cambiar Imagen</span>
+                                    </label>
+                                    <input type="file" id="modModalFile" accept="image/*" class="file-input-hidden">
+                                </div>
+                                <div class="upload-card-footer">Imagen grande al abrir el cuadro de detalles</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5 Miniaturas Obligatorias -->
+                    <div class="editor-section">
+                        <div class="editor-section-header">
+                            <div>
+                                <h3 class="editor-section-title tech-font"><i class="ph-light ph-squares-four"></i> Miniaturas del Modal (Exactamente 5 obligatorias)</h3>
+                                <p class="tab-desc" style="margin: 0;">Son las 5 fotos que aparecen debajo de la imagen principal del modal y se amplían en el visor.</p>
+                            </div>
+                            <span class="badge-counter-5" id="thumbCounterBadge">5 / 5 completadas</span>
+                        </div>
+
+                        <div class="thumbnails-editor-grid" id="thumbnailsEditorGrid">
+                            <!-- 5 slots generados dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. SECCIÓN: NUESTROS TRABAJOS -->
+            <section class="admin-tab-content" id="tab-trabajos">
+                <div class="tab-header">
+                    <div>
+                        <h1 class="tab-title tech-font">Nuestros Trabajos (Obras y Procesos)</h1>
+                        <p class="tab-desc">Subí o editá registros fotográficos clasificados en las 4 etapas técnicas constructivas.</p>
+                    </div>
+                    <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                        <button type="button" class="btn btn-outline" id="forceSyncWorksBtn" title="Restaurar las 29 obras con las fotos reales del catálogo">
+                            <i class="ph-light ph-arrows-clockwise"></i>
+                            <span>Restaurar Catálogo (29 Fotos)</span>
+                        </button>
+                        <button type="button" class="btn btn-primary" id="openAddWorkModalBtn">
+                            <i class="ph-light ph-plus"></i>
+                            <span>Agregar Nueva Obra</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filtros Rápidos -->
+                <div class="works-admin-filter-bar">
+                    <button type="button" class="admin-filter-pill active" data-filter="all">Todas (<span id="totalWorksCount">0</span>)</button>
+                    <button type="button" class="admin-filter-pill" data-filter="estructura">Estructura & Steel Frame</button>
+                    <button type="button" class="admin-filter-pill" data-filter="montaje">Montaje & Logística</button>
+                    <button type="button" class="admin-filter-pill" data-filter="envolvente">Terminaciones & Envolvente</button>
+                    <button type="button" class="admin-filter-pill" data-filter="finalizadas">Obras Entregadas</button>
+                </div>
+
+                <!-- Grilla de Obras -->
+                <div class="works-admin-grid" id="worksAdminGrid">
+                    <!-- Tarjetas de obras renderizadas dinámicamente -->
+                </div>
+            </section>
+
+            <!-- 4. SECCIÓN: PREGUNTAS FRECUENTES -->
+            <section class="admin-tab-content" id="tab-faqs">
+                <div class="tab-header">
+                    <div>
+                        <h1 class="tab-title tech-font">Preguntas Frecuentes</h1>
+                        <p class="tab-desc">Creá, editá o eliminá las preguntas y respuestas del acordeón de la landing page.</p>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="openAddFaqModalBtn">
+                        <i class="ph-light ph-plus"></i>
+                        <span>Nueva Pregunta</span>
+                    </button>
+                </div>
+
+                <div class="faqs-admin-list" id="faqsAdminList">
+                    <!-- Lista de FAQs renderizada dinámicamente -->
+                </div>
+            </section>
+
+            <!-- 5. SECCIÓN: BANDEJA DE ENTRADA -->
+            <section class="admin-tab-content" id="tab-inbox">
+                <div class="tab-header">
+                    <div>
+                        <h1 class="tab-title tech-font">Bandeja de Entrada de Contactos</h1>
+                        <p class="tab-desc">Mensajes y consultas enviados por los visitantes desde el formulario web con su número de teléfono.</p>
+                    </div>
+                    <div class="inbox-actions">
+                        <button type="button" class="btn btn-outline" id="markAllReadBtn">
+                            <i class="ph-light ph-checks"></i>
+                            <span>Marcar todo como leído</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filtros de Bandeja -->
+                <div class="inbox-filter-bar">
+                    <button type="button" class="inbox-filter-btn active" data-filter="all">Todos (<span id="inboxTotalCount">0</span>)</button>
+                    <button type="button" class="inbox-filter-btn" data-filter="unread">No leídos (<span id="inboxUnreadCount">0</span>)</button>
+                    <button type="button" class="inbox-filter-btn" data-filter="archived">Archivados</button>
+                </div>
+
+                <!-- Lista de Mensajes -->
+                <div class="inbox-messages-container" id="inboxMessagesContainer">
+                    <!-- Mensajes renderizados en tiempo real -->
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- MODAL: Agregar / Editar Obra -->
+    <div class="admin-modal-overlay" id="workModal">
+        <div class="admin-modal-box">
+            <div class="admin-modal-header tech-font">
+                <span id="workModalTitle">Agregar Registro de Obra</span>
+                <button type="button" class="modal-close-icon" id="closeWorkModalBtn"><i class="ph-light ph-x"></i></button>
+            </div>
+            <form id="workForm" class="admin-modal-body">
+                <input type="hidden" id="workEditId" value="">
+                
+                <div class="form-group">
+                    <label class="field-label tech-font">Etapa Constructiva (Obligatorio) *</label>
+                    <select class="admin-input" id="workPhaseSelect" required>
+                        <option value="" disabled selected>Seleccioná una de las 4 etapas...</option>
+                        <option value="estructura">Estructura y Steel Frame</option>
+                        <option value="montaje">Montaje y Logística</option>
+                        <option value="envolvente">Terminaciones y Envolvente</option>
+                        <option value="finalizadas">Obras Entregadas</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="field-label tech-font">Título Técnico del Trabajo *</label>
+                    <input type="text" class="admin-input" id="workTitleInput" required placeholder="Ej: Izaje de panel estructural en lote">
+                </div>
+
+                <div class="form-group">
+                    <label class="field-label tech-font">Breve Descripción Técnica *</label>
+                    <textarea class="admin-input" id="workDescInput" rows="3" required placeholder="Explicación concisa del proceso operativo..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="field-label tech-font">Proporción / Formato de la Foto</label>
+                    <select class="admin-input" id="workRatioSelect">
+                        <option value="16:9 Panorámica">16:9 Panorámica (Horizontal estándar)</option>
+                        <option value="2:3 Vertical">2:3 Vertical (Detalle estructural alto)</option>
+                        <option value="1:1 Cuadrada">1:1 Cuadrada (Nudo / detalle cerrado)</option>
+                        <option value="5:4 Especial">5:4 Especial (Interiores)</option>
+                        <option value="3:4 Especial">3:4 Proporción Especial</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="field-label tech-font">Fotografía *</label>
+                    <div class="work-file-dropzone" id="workDropzone">
+                        <img src="" id="workModalImgPreview" class="work-modal-preview hidden">
+                        <div class="dropzone-prompt" id="dropzonePrompt">
+                            <i class="ph-light ph-upload-simple"></i>
+                            <span>Hacé clic para seleccionar una foto</span>
+                            <span class="dropzone-sub">Se convertirá automáticamente a WebP optimizado</span>
+                        </div>
+                        <input type="file" id="workFileInput" accept="image/*" class="file-input-hidden">
+                    </div>
+                </div>
+
+                <div class="admin-modal-footer">
+                    <button type="button" class="btn btn-outline" id="cancelWorkModalBtn">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" id="saveWorkSubmitBtn">
+                        <i class="ph-light ph-check"></i>
+                        <span>Guardar Registro</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: Agregar / Editar FAQ -->
+    <div class="admin-modal-overlay" id="faqModal">
+        <div class="admin-modal-box">
+            <div class="admin-modal-header tech-font">
+                <span id="faqModalTitle">Agregar Pregunta Frecuente</span>
+                <button type="button" class="modal-close-icon" id="closeFaqModalBtn"><i class="ph-light ph-x"></i></button>
+            </div>
+            <form id="faqForm" class="admin-modal-body">
+                <input type="hidden" id="faqEditId" value="">
+                
+                <div class="form-group">
+                    <label class="field-label tech-font">Pregunta *</label>
+                    <input type="text" class="admin-input" id="faqQuestionInput" required placeholder="Ej: ¿Qué incluye el nivel Standard?">
+                </div>
+
+                <div class="form-group">
+                    <label class="field-label tech-font">Respuesta / Introducción *</label>
+                    <textarea class="admin-input" id="faqIntroInput" rows="3" required placeholder="Texto introductorio de la respuesta..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="field-label tech-font">Puntos Destacados (Uno por línea con formato Título: Detalle)</label>
+                    <textarea class="admin-input" id="faqItemsInput" rows="4" placeholder="Viviendas: Casas modernas con confort térmico...&#10;Cabañas: Soluciones habitacionales optimizadas..."></textarea>
+                    <span class="field-help">Cada línea se convertirá en un ítem de la lista con su título en negrita.</span>
+                </div>
+
+                <div class="admin-modal-footer">
+                    <button type="button" class="btn btn-outline" id="cancelFaqModalBtn">Cancelar</button>
+                    <button type="submit" class="btn btn-primary" id="saveFaqSubmitBtn">
+                        <i class="ph-light ph-check"></i>
+                        <span>Guardar Pregunta</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Firebase SDK Compat -->
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.0/firebase-storage-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+
+    <!-- Lógica del Panel -->
+    <script src="js/admin.js"></script>
+</body>
+</html>
