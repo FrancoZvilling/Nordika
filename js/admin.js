@@ -421,7 +421,7 @@
                     // Si hay un archivo nuevo seleccionado, optimizar y subir a Storage
                     if (heroNewFiles[i]) {
                         showToast(`Optimizando y subiendo Foto 0${i + 1}...`, 'info');
-                        const compressedBlob = await compressImageToWebP(heroNewFiles[i], 1400, 900, 0.80);
+                        const compressedBlob = await compressImageToWebP(heroNewFiles[i], 1920, 1080, 0.85);
                         const storagePath = `hero/slide_${i}_${Date.now()}.webp`;
                         imageUrl = await uploadBlobToStorage(compressedBlob, storagePath);
                         heroNewFiles[i] = null; // Resetear archivo pendiente
@@ -475,7 +475,7 @@
         '40m': {
             id: '40m',
             name: 'Módulo 40 m²',
-            sub: 'Nö. 02 · 1 Dormitorio',
+            sub: 'Nö. 02 · 1/2 Dormitorios',
             priceBasico: 'USD $22.000',
             priceStandard: 'USD $28.000',
             pricePremium: 'USD $35.000',
@@ -492,7 +492,7 @@
         '60m': {
             id: '60m',
             name: 'Módulo 60 m²',
-            sub: 'Nö. 03 · 2 Dormitorios',
+            sub: 'Nö. 03 · 2/3 Dormitorios',
             priceBasico: 'USD $30.000',
             priceStandard: 'USD $39.500',
             pricePremium: 'USD $48.000',
@@ -701,7 +701,7 @@
                 // 1. Subir Tarjeta si cambió
                 if (pendingModuleUploads.tarjeta) {
                     showToast('Optimizando y subiendo foto de tarjeta...', 'info');
-                    const blob = await compressImageToWebP(pendingModuleUploads.tarjeta, 900, 675, 0.80);
+                    const blob = await compressImageToWebP(pendingModuleUploads.tarjeta, 1200, 900, 0.85);
                     tarjetaUrl = await uploadBlobToStorage(blob, `modulos/${activeModuleId}/tarjeta_${Date.now()}.webp`);
                     pendingModuleUploads.tarjeta = null;
                 }
@@ -709,7 +709,7 @@
                 // 2. Subir Modal Principal si cambió
                 if (pendingModuleUploads.modal) {
                     showToast('Optimizando y subiendo foto de modal...', 'info');
-                    const blob = await compressImageToWebP(pendingModuleUploads.modal, 1200, 900, 0.80);
+                    const blob = await compressImageToWebP(pendingModuleUploads.modal, 1600, 1200, 0.85);
                     modalUrl = await uploadBlobToStorage(blob, `modulos/${activeModuleId}/modal_${Date.now()}.webp`);
                     pendingModuleUploads.modal = null;
                 }
@@ -718,7 +718,7 @@
                 for (let i = 0; i < 5; i++) {
                     if (pendingModuleUploads.thumbnails[i]) {
                         showToast(`Optimizando miniatura 0${i + 1}...`, 'info');
-                        const blob = await compressImageToWebP(pendingModuleUploads.thumbnails[i], 400, 300, 0.75);
+                        const blob = await compressImageToWebP(pendingModuleUploads.thumbnails[i], 1600, 1200, 0.85);
                         finalThumbs[i] = await uploadBlobToStorage(blob, `modulos/${activeModuleId}/thumb_${i}_${Date.now()}.webp`);
                         pendingModuleUploads.thumbnails[i] = null;
                     }
@@ -990,8 +990,8 @@
                 // Si seleccionó un archivo nuevo, comprimir a WebP display y thumb
                 if (pendingWorkFile) {
                     showToast('Optimizando fotografía a WebP...', 'info');
-                    const displayBlob = await compressImageToWebP(pendingWorkFile, 1400, 950, 0.80);
-                    const thumbBlob = await compressImageToWebP(pendingWorkFile, 400, 300, 0.75);
+                    const displayBlob = await compressImageToWebP(pendingWorkFile, 1920, 1280, 0.85);
+                    const thumbBlob = await compressImageToWebP(pendingWorkFile, 600, 450, 0.80);
 
                     const timestamp = Date.now();
                     displayUrl = await uploadBlobToStorage(displayBlob, `trabajos/display_${timestamp}.webp`);
